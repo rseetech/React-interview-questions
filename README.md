@@ -1,105 +1,76 @@
 # React-interview-questions
 
-1. ### What are the possible ways to create objects in JavaScript
+   Here you will see Top 100 React interview questions for Fresher and experienced. 
 
-   There are many ways to create objects in javascript as below
+1. ### Introduction to React
 
-   1. **Object constructor:**
+   React is an efficient, flexible, and open-source JavaScript framework library that allows developers to the creation of simple, fast, and scalable web applications. Jordan Walke, a software engineer who was working for Facebook created React. It was first deployed on the news feed of Facebook in 2011 and on Instagram in 2012. Developers from the Javascript background can easily develop web applications with the help of React.
 
-      The simplest way to create an empty object is using the Object constructor. Currently this approach is not recommended.
+   **[⬆ Back to Top](#table-of-contents)**
 
-      ```javascript
-      var object = new Object();
-      ```
+2. ### What is React?
 
-   2. **Object's create method:**
+   ReactJS is an open-source front-end JavaScript library for building user interfaces. ReactJS is maintained by Facebook and a community of individual developers and companies. It is widely used as a base in building single-page websites and mobile applications. It is very easy to use, and it allows users to create reusable UI components.
 
-      The create method of Object creates a new object by passing the prototype object as a parameter
+   **[⬆ Back to Top](#table-of-contents)**
 
-      ```javascript
-      var object = Object.create(null);
-      ```
+3. ### Features of React
 
-   3. **Object literal syntax:**
+   1. JSX : JSX is an extension to javascript. Though it is not mandatory to use JSX in react, it is one of the good features and easy to use.
 
-      The object literal syntax (or object initializer), is a comma-separated set of name-value pairs wrapped in curly braces.
+   2. Components: Components are like pure javascript functions that help make the code easy by splitting the logic into reusable independent code. We can use components as functions and components as classes. Components also have a state, props which makes life easy. Inside a class, the state of each of the props is maintained.
+   
+   3. Virtual DOM: React creates a virtual dom, i.e., in-memory data -structure cache. Only the final changes of DOM has later updated in the browsers DOM.
 
-      ```javascript
-      var object = {
-           name: "Sudheer",
-           age: 34
-      };
+   4. Javascript Expressions: JS expressions can be used in the jsx files using curly brackets, for example {}.
 
-      Object literal property values can be of any data type, including array, function, and nested object.
-      ```
+   **[⬆ Back to Top](#table-of-contents)**
 
-      **Note:** This is an easiest way to create an object
+4. ###
 
-   4. **Function constructor:**
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      Create any function and apply the new operator to create object instances,
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      ```javascript
-      function Person(name) {
-        this.name = name;
-        this.age = 21;
-      }
-      var object = new Person("Sudheer");
-      ```
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-   5. **Function constructor with prototype:**
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      This is similar to function constructor but it uses prototype for their properties and methods,
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      ```javascript
-      function Person() {}
-      Person.prototype.name = "Sudheer";
-      var object = new Person();
-      ```
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      This is equivalent to an instance created with an object create method with a function prototype and then call that function with an instance and parameters as arguments.
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      ```javascript
-      function func() {};
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      new func(x, y, z);
-      ```
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      **(OR)**
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      ```javascript
-      // Create a new instance using function prototype.
-      var newInstance = Object.create(func.prototype)
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      // Call the function
-      var result = func.call(newInstance, x, y, z),
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      // If the result is a non-null object then use it otherwise just use the new instance.
-      console.log(result && typeof result === 'object' ? result : newInstance);
-      ```
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-   6. **ES6 Class syntax:**
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      ES6 introduces class feature to create the objects
+   **[⬆ Back to Top](#table-of-contents)**
+4. ###
 
-      ```javascript
-      class Person {
-        constructor(name) {
-          this.name = name;
-        }
-      }
-
-      var object = new Person("Sudheer");
-      ```
-
-   7. **Singleton pattern:**
-
-      A Singleton is an object which can only be instantiated one time. Repeated calls to its constructor return the same instance and this way one can ensure that they don't accidentally create multiple instances.
-
-      ```javascript
-      var object = new (function () {
-        this.name = "Sudheer";
-      })();
-      ```
-
-      **[⬆ Back to Top](#table-of-contents)**
+   **[⬆ Back to Top](#table-of-contents)**

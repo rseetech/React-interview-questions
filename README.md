@@ -39,11 +39,11 @@
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What are the major features of React?
-The major features of React are:
-•	It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
-•	Supports server-side rendering. / server-side rendering (SSR)
-•	Follows Unidirectional data flow or data binding.
-•	Uses reusable/composable UI components to develop the view.
+   The major features of React are:
+   •	It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
+   •	Supports server-side rendering. / server-side rendering (SSR)
+   •	Follows Unidirectional data flow or data binding.
+   •	Uses reusable/composable UI components to develop the view.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -82,9 +82,9 @@ Here, are cons/ drawbacks of using ReactJS:
 
 4. ### What are Components in ReactJS?
 Components are like pure javascript functions that help make the code easy by splitting the logic into reusable independent code.
-Functions Components
+**Functions Components**
 Functional components are some of the more common components that will come across while working in React. These are simply JavaScript functions. We can create a functional component to React by writing a JavaScript function. These functions may or may not receive data as parameters. In the functional Components, the return value is the JSX code to render to the DOM tree.
-
+```
 test.jsx
 
 import React from 'react';
@@ -94,7 +94,8 @@ function Hello() {
 } 
 const Hello_comp = <Hello />;
 export default Hello_comp;
-
+```
+```
 index.js
 
 import React from 'react';
@@ -105,10 +106,11 @@ ReactDOM.render(
     Hello_comp,
     document.getElementById('root')
 );
-
-Class  Component
+```
+**Class  Component**
 React class based components are the bread and butter of most modern web apps built in ReactJS. These components are simple classes (made up of multiple functions that add functionality to the application). All class based components are child classes for the Component class of ReactJS. 
 Here is a ReactJS example that uses a class as a component.
+```
 test.jsx
 
 import React from 'react';
@@ -120,8 +122,9 @@ class Hello extends React. Component {
   }
 }
 export default Hello;
+```
 We can use Hello component in index.js file as follows:
-
+```
 index.js
 
 import React from 'react';
@@ -132,19 +135,17 @@ ReactDOM.render(
     <Hello />,
     document.getElementById('root')
 );
-
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
 4. ### ReactJS | Lifecycle of Components
 Every React Component has a lifecycle of its own, lifecycle of a component can be defined as the series of methods that are invoked in different stages of the component’s existence.
 
-•	Initialization: This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
-•	Mounting: Mounting is the stage of rendering the JSX returned by the render method itself.
-•	Updating: Updating is the stage when the state of a component is updated and the application is repainted.
-•	Unmounting: As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
-
-![Alt text](image.png)
+•	**Initialization:** This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
+•	**Mounting:** Mounting is the stage of rendering the JSX returned by the render method itself.
+•	**Updating:** Updating is the stage when the state of a component is updated and the application is repainted.
+•	**Unmounting:** As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
 
 
 1. **Initialization:** In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
@@ -174,14 +175,14 @@ componentWillRecieveProps(newProps)
 		// Use this.setState() to rerender the page.
 	}
 }
-•	setState() Function: This is not particularly a Lifecycle function and can be invoked explicitly at any instant. This function is used to update the state of a component. You may refer to this article for detailed information.
-•	shouldComponentUpdate() Function: By default, every state or props update re-render the page but this may not always be the desired outcome, sometimes it is desired that updating the page will not be repainted. The shouldComponentUpdate() Function fulfills the requirement by letting React know whether the component’s output will be affected by the update or not.
+•	**setState() Function:** This is not particularly a Lifecycle function and can be invoked explicitly at any instant. This function is used to update the state of a component. You may refer to this article for detailed information.
+•	**shouldComponentUpdate() Function:** By default, every state or props update re-render the page but this may not always be the desired outcome, sometimes it is desired that updating the page will not be repainted. The shouldComponentUpdate() Function fulfills the requirement by letting React know whether the component’s output will be affected by the update or not.
 
-•	componentWillUpdate() Function: As the name clearly suggests, this function is invoked before the component is rerendered i.e. this function gets invoked once before the render() function is executed after the updation of State or Props.
-•	componentDidUpdate() Function: Similarly this function is invoked after the component is rerendered i.e. this function gets invoked once after the render() function is executed after the updation of State or Props.
+•	**componentWillUpdate() Function:** As the name clearly suggests, this function is invoked before the component is rerendered i.e. this function gets invoked once before the render() function is executed after the updation of State or Props.
+•	**componentDidUpdate() Function:** Similarly this function is invoked after the component is rerendered i.e. this function gets invoked once after the render() function is executed after the updation of State or Props.
 
-4. Unmounting: This is the final phase of the lifecycle of the component that is the phase of unmounting the component              from the DOM. The following function is the sole member of this phase.
-•	componentWillUnmount() Function: This function is invoked before the component is finally unmounted from the DOM i.e. this function gets invoked once before the component is removed from the page and this denotes the end of the lifecycle.
+4. **Unmounting:** This is the final phase of the lifecycle of the component that is the phase of unmounting the component              from the DOM. The following function is the sole member of this phase.
+•	**componentWillUnmount() Function:** This function is invoked before the component is finally unmounted from the DOM i.e. this function gets invoked once before the component is removed from the page and this denotes the end of the lifecycle.
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -355,10 +356,10 @@ Both props and state are plain JavaScript objects. While both of them hold infor
 
 4. ### Why should we not update the state directly?
 If you try to update state directly then it won't re-render the component.
-//Wrong
+**//Wrong**
 this.state.message = 'Hello world'
 Instead use setState() method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
-//Correct
+**//Correct**
 this.setState({ message: 'Hello World' })
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -391,7 +392,7 @@ We call them pure components because they can accept any dynamically provided ch
 const EnhancedComponent = higherOrderComponent(WrappedComponent)
 
 HOC can be used for many use cases:
-i.	Code reuse, logic and bootstrap abstraction.
+i.	   Code reuse, logic and bootstrap abstraction.
 ii.	Render hijacking.
 iii.	State abstraction and manipulation.
 iv.	Props manipulation.
@@ -407,12 +408,12 @@ const {Provider, Consumer} = React.createContext(defaultValue)
 
 4. ### How to write comments in React?
 The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
-Single-line comments:
+**Single-line comments:**
 <div>
   {/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */}
   {`Welcome ${user}, let's play React`}
 </div>
-Multi-line comments:
+**Multi-line comments:**
 <div>
   {/* Multi-line comments for more than
    one line */}

@@ -28,13 +28,13 @@
 
 3. ### Features of React
 
-   1. JSX : JSX is an extension to javascript. Though it is not mandatory to use JSX in react, it is one of the good features and easy to use.
+   1. **JSX :** JSX is an extension to javascript. Though it is not mandatory to use JSX in react, it is one of the good features and easy to use.
 
-   2. Components: Components are like pure javascript functions that help make the code easy by splitting the logic into reusable independent code. We can use components as functions and components as classes. Components also have a state, props which makes life easy. Inside a class, the state of each of the props is maintained.
+   2. **Components:** Components are like pure javascript functions that help make the code easy by splitting the logic into reusable independent code. We can use components as functions and components as classes. Components also have a state, props which makes life easy. Inside a class, the state of each of the props is maintained.
    
-   3. Virtual DOM: React creates a virtual dom, i.e., in-memory data -structure cache. Only the final changes of DOM has later updated in the browsers DOM.
+   3. **Virtual DOM:** React creates a virtual dom, i.e., in-memory data -structure cache. Only the final changes of DOM has later updated in the browsers DOM.
 
-   4. Javascript Expressions: JS expressions can be used in the jsx files using curly brackets, for example {}.
+   4. **Javascript Expressions:** JS expressions can be used in the jsx files using curly brackets, for example {}.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -49,6 +49,7 @@ The major features of React are:
 
 4. ### Advantages of ReactJS
 Here, are important pros/benefits of using ReactJS:
+```
 •	ReactJS uses virtual dom that makes use of in-memory data-structure cache, and only the final changes are updated in browsers dom. This makes the app faster.
 •	You can create components of your choice by using the react component feature. The components can be reused and also helpful in code maintenance.
 •	Reactjs is an open-source javascript library, so it is easy to start with.
@@ -64,7 +65,7 @@ Here, are important pros/benefits of using ReactJS:
 •	Known to be SEO Friendly. ...
 •	The Benefit of Having JavaScript Library. ...
 •	Scope for Testing the Codes.
-
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -146,7 +147,7 @@ Every React Component has a lifecycle of its own, lifecycle of a component can b
 ![Alt text](image.png)
 
 
-1. Initialization: In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
+1. **Initialization:** In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
 class Clock extends React.Component {
 	constructor(props)
 	{
@@ -159,11 +160,11 @@ class Clock extends React.Component {
 	}
 }
 
- 2. Mounting: Mounting is the phase of the component lifecycle when the initialization of the component is completed and the component is mounted on the DOM and rendered for the first time on the webpage.
+ 2. **Mounting:** Mounting is the phase of the component lifecycle when the initialization of the component is completed and the component is mounted on the DOM and rendered for the first time on the webpage.
 •	componentWillMount() Function: As the name clearly suggests, this function is invoked right before the component is mounted on the DOM i.e. this function gets invoked once before the render() function is executed for the first time.
 •	componentDidMount() Function: Similarly as the previous one this function is invoked right after the component is mounted on the DOM i.e. this function gets invoked once after the render() function is executed for the first time
 
-3. Updation: React is a JS library that helps create Active web pages easily. Now active web pages are specific pages that behave according to their user.
+3. **Updation:** React is a JS library that helps create Active web pages easily. Now active web pages are specific pages that behave according to their user.
 componentWillRecieveProps() Function: This is a Props exclusive Function and is independent of States. This function is invoked before a mounted component gets its props reassigned. The function is passed the new set of Props which may or may not be identical to the original Props.
 componentWillRecieveProps(newProps)
 

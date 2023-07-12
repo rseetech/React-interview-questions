@@ -153,6 +153,8 @@ Every React Component has a lifecycle of its own, lifecycle of a component can b
 
 
 1. **Initialization:** In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
+
+```
 class Clock extends React.Component {
 	constructor(props)
 	{
@@ -164,13 +166,17 @@ class Clock extends React.Component {
 		this.state = { date : new Date() };
 	}
 }
+```
 
  2. **Mounting:** Mounting is the phase of the component lifecycle when the initialization of the component is completed and the component is mounted on the DOM and rendered for the first time on the webpage.
 1.	componentWillMount() Function: As the name clearly suggests, this function is invoked right before the component is mounted on the DOM i.e. this function gets invoked once before the render() function is executed for the first time.
-2.	componentDidMount() Function: Similarly as the previous one this function is invoked right after the component is mounted on the DOM i.e. this function gets invoked once after the render() function is executed for the first time
+
+2.	**componentDidMount() Function:** Similarly as the previous one this function is invoked right after the component is mounted on the DOM i.e. this function gets invoked once after the render() function is executed for the first time
 
 3. **Updation:** React is a JS library that helps create Active web pages easily. Now active web pages are specific pages that behave according to their user.
 componentWillRecieveProps() Function: This is a Props exclusive Function and is independent of States. This function is invoked before a mounted component gets its props reassigned. The function is passed the new set of Props which may or may not be identical to the original Props.
+
+```
 componentWillRecieveProps(newProps)
 
 {
@@ -179,15 +185,21 @@ componentWillRecieveProps(newProps)
 		// Use this.setState() to rerender the page.
 	}
 }
+```
+
 1.	**setState() Function:** This is not particularly a Lifecycle function and can be invoked explicitly at any instant. This function is used to update the state of a component. You may refer to this article for detailed information.
+
 2.	**shouldComponentUpdate() Function:** By default, every state or props update re-render the page but this may not always be the desired outcome, sometimes it is desired that updating the page will not be repainted. The shouldComponentUpdate() Function fulfills the requirement by letting React know whether the component’s output will be affected by the update or not.
 
 3.	**componentWillUpdate() Function:** As the name clearly suggests, this function is invoked before the component is rerendered i.e. this function gets invoked once before the render() function is executed after the updation of State or Props.
+
 4.	**componentDidUpdate() Function:** Similarly this function is invoked after the component is rerendered i.e. this function gets invoked once after the render() function is executed after the updation of State or Props.
 
 4. **Unmounting:** This is the final phase of the lifecycle of the component that is the phase of unmounting the component from the DOM. 
 The following function is the sole member of this phase.
-1.	**componentWillUnmount() Function:** This function is invoked before the component is finally unmounted from the DOM i.e. this function gets invoked once before the component is removed from the page and this denotes the end of the lifecycle.
+1.	**componentWillUnmount() Function:** This function is invoked before the component is finally unmounted from the DOM i.e. this function gets invoked once before the component is removed from the page and this denotes the end of the lifecycle.  
+
+```
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -244,7 +256,7 @@ class Test extends React.Component {
 ReactDOM.render(
 	<Test />,
 	document.getElementById('root'));
-
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -271,38 +283,43 @@ ReactDOM.render(
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### How different is React’s ES6 syntax when compared to ES5?
-Syntax has changed from ES5 to ES6 in the following aspects:
 
-require vs import
+ Syntax has changed from ES5 to ES6 in the following aspects:
+
+
+ **require vs import**
+ ```
 // ES5
 var React = require('react');
 // ES6
 import React from 'react';
-
-export vs exports
+```
+**export vs exports**
+```
 // ES5
 module.exports = Component;
 // ES6
 export default Component;
-
+```
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What is the purpose of render() in React.
-Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as <form>, <group>,<div> etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
+
+   Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as <form>, <group>,<div> etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### How can you embed two or more components into one?
 We can embed components into one in the following way:
-
+```
 class MyComponent extends React.Component{
     render(){
         return(          
              
 <div>
                
-<h1>Hello</h1>
+<h3>Hello</h3>
  
                 <Header/>
             </div>
@@ -310,6 +327,9 @@ class MyComponent extends React.Component{
         );
     }
 }
+```
+
+```
 class Header extends React.Component{
     render(){
         return
@@ -321,19 +341,21 @@ class Header extends React.Component{
 ReactDOM.render(
     <MyComponent/>, document.getElementById('content')
 );
+```
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What is Props?
 
-rops is the shorthand for Properties in React. They are read-only components which must be kept pure i.e. immutable. They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
+   rops is the shorthand for Properties in React. They are read-only components which must be kept pure i.e. immutable. They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What is state in React?
 
-State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
+   State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
 
+```
 class User extends React.Component {
   constructor(props) {
     super(props)
@@ -351,6 +373,7 @@ class User extends React.Component {
     )
   }
 }
+```
 
 ![Alt text](image-1.png)
 
@@ -358,22 +381,27 @@ class User extends React.Component {
 
 4. ### What is the difference between state and props?
 
-Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
+   Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### Why should we not update the state directly?
-If you try to update state directly then it won't re-render the component.
-**//Wrong**
-this.state.message = 'Hello world'
-Instead use setState() method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
-**//Correct**
-this.setState({ message: 'Hello World' })
+   If you try to update state directly then it won't re-render the component.
+   **//Wrong**
+   ```
+   this.state.message = 'Hello world'
+   ```
+   Instead use setState() method. 
+   It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
+   **//Correct**
 
+```
+   this.setState({ message: 'Hello World' })
+   ```
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What are synthetic events in React?
-SyntheticEvent is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including stopPropagation() and preventDefault(), except the events work identically across all browsers.
+   SyntheticEvent is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including stopPropagation() and preventDefault(), except the events work identically across all browsers.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -394,33 +422,35 @@ class MyComponent extends React.Component {
 
 4. ### What are Higher-Order Components?
 
-A higher-order component (HOC) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
+   A higher-order component (HOC) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
 
-We call them pure components because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
-const EnhancedComponent = higherOrderComponent(WrappedComponent)
+   We call them pure components because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
+   const EnhancedComponent = higherOrderComponent(WrappedComponent)
 
-HOC can be used for many use cases:
-i.	   Code reuse, logic and bootstrap abstraction.
-ii.	Render hijacking.
-iii.	State abstraction and manipulation.
-iv.	Props manipulation.
+   HOC can be used for many use cases:
+   i.	 Code reuse, logic and bootstrap abstraction.
+   ii. Render hijacking.
+   iii. State abstraction and manipulation.
+   iv. Props manipulation.
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What is context?
-Context provides a way to pass data through the component tree without having to pass props down manually at every level.
-For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
-const {Provider, Consumer} = React.createContext(defaultValue)
+   Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+   For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
+   const {Provider, Consumer} = React.createContext(defaultValue)
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### How to write comments in React?
 The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
+
 **Single-line comments:**
 <div>
   {/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */}
   {`Welcome ${user}, let's play React`}
 </div>
+
 **Multi-line comments:**
 <div>
   {/* Multi-line comments for more than
@@ -428,13 +458,13 @@ The comments in React/JSX are similar to JavaScript Multiline comments but are w
   {`Welcome ${user}, let's play React`}
 </div>
 
-
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What are fragments?
 
-It's common pattern in React which is used for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
-render() {
+   It's common pattern in React which is used for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
+
+ render() {
   return (
     <React.Fragment>
       <ChildA />
@@ -444,6 +474,7 @@ render() {
   )
 }
 There is also a shorter syntax, but it's not supported in many tools:
+
 render() {
   return (
     <>
@@ -457,9 +488,9 @@ render() {
 **[⬆ Back to Top](#table-of-contents)**
 
 4. ### Why fragments are better than container divs?
-Below are the list of reasons,
-i.	Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
-ii.	Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
-iii.	The DOM Inspector is less cluttered.
+   Below are the list of reasons,
+   i.	Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
+   ii.	Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
+   iii.	The DOM Inspector is less cluttered.
 
    **[⬆ Back to Top](#table-of-contents)**

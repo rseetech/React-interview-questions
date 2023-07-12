@@ -280,7 +280,38 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-12. ### How different is React’s ES6 syntax when compared to ES5?
+13. ### How Virtual DOM works?
+
+   The Virtual DOM works in three simple steps.
+      i.	Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+      ![Alt text](image.png)
+      ii.	Then the difference between the previous DOM representation and the new one is calculated.
+      ![Alt text](image-2.png)
+      iii.	Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+      ![Alt text](image-3.png)
+
+   **[⬆ Back to Top](#table-of-contents)**
+   
+14. ### What is the difference between Real DOM and Virtual DOM?
+
+   Below are the main differences between Real DOM and Virtual DOM,
+
+   | Real DOM                                     | Virtual DOM                                     |
+   | -------------------------------------------- | ----------------------------------------------- |
+   | Updates are slow                             | Updates are fast                                |
+   | DOM manipulation is very expensive.          | DOM manipulation is very easy                   |
+   | You can update HTML directly.                | You Can’t directly update HTML                  |
+   | It causes too much of memory wastage         | There is no memory wastage                      |
+   | Creates a new DOM if element updates         | It updates the JSX if element update            |
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+15. ### What is the difference between Shadow DOM and Virtual DOM?
+   The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The Virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+16. ### How different is React’s ES6 syntax when compared to ES5?
 
    Syntax has changed from ES5 to ES6 in the following aspects:
 
@@ -302,13 +333,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-13. ### What is the purpose of render() in React.
+17. ### What is the purpose of render() in React.
 
    Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as `<form>`, `<group>`,`<div>` etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-14. ### How can you embed two or more components into one?
+18. ### How can you embed two or more components into one?
    We can embed components into one in the following way:
 
       ```
@@ -338,14 +369,14 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-15. ### What is Props?
+19. ### What is Props?
 
    Props is the shorthand for Properties in React. They are read-only components which must be kept pure 
    i.e. immutable. They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-16. ### What is state in React?
+20. ### What is state in React?
 
    State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
 
@@ -372,13 +403,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-17. ### What is the difference between state and props?
+21. ### What is the difference between state and props?
 
    Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-18. ### Why should we not update the state directly?
+22. ### Why should we not update the state directly?
    If you try to update state directly then it won't re-render the component.
 
    **//Wrong**
@@ -396,12 +427,12 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-19. ### What are synthetic events in React?
+23. ### What are synthetic events in React?
    SyntheticEvent is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including **stopPropagation()** and **preventDefault()**, except the events work identically across all browsers.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-20. ### What is the use of refs?
+24. ### What is the use of refs?
    The ref is used to return a reference to the element. They should be avoided in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
       ```
       class MyComponent extends React.Component {
@@ -417,7 +448,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-21. ### What are Higher-Order Components?
+25. ### What are Higher-Order Components?
 
    A higher-order component ***(HOC)*** is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
 
@@ -433,7 +464,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-22. ### What is context?
+26. ### What is context?
    Context provides a way to pass data through the component tree without having to pass props down manually at every level.
    For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
 
@@ -443,7 +474,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-23. ### How to write comments in React?
+27. ### How to write comments in React?
    The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
 
    **Single-line comments:**
@@ -461,7 +492,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-24. ### What are fragments?
+28. ### What are fragments?
    It's common pattern in React which is used for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
 
       ```
@@ -492,11 +523,62 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-25. ### Why fragments are better than container divs?
+29. ### Why fragments are better than container divs?
    Below are the list of reasons,
 
-   1.	Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
-   2.	Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
-   3.	The DOM Inspector is less cluttered.
+      1.	Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
+      2.	Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
+      3.	The DOM Inspector is less cluttered.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+30. ### What is React Router?
+
+   React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+31. ### What are the <Router> components of React Router v4?
+
+   React Router v4 provides below 3 <Router> components:
+
+   1.	<BrowserRouter>
+   2.	<HashRouter>
+   3.	<MemoryRouter>
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+32. ### How to implement default or NotFound page?
+
+   A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
+
+      ```
+         <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route path="/user" component={User}/>
+            <Route component={NotFound} />
+         </Switch>
+      ```
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+33. ### How to perform automatic redirect after login?
+
+   The react-router package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
+
+   ```
+      import React, { Component } from 'react'
+      import { Redirect } from 'react-router'
+
+      export default class LoginComponent extends Component {
+         render() {
+            if (this.state.isLoggedIn === true) {
+               return <Redirect to="/your/redirect/page" />
+            } else {
+               return <div>{'Login Please'}</div>
+            }
+         }
+      }
+   ```
 
    **[⬆ Back to Top](#table-of-contents)**

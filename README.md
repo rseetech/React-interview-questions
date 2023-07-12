@@ -89,7 +89,7 @@ test.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 function Hello() {
-    return <h1>Hello, from Guru99 Tutorials!</h1>;
+    return <h1>Hello, From RseeTech!</h1>;
 } 
 const Hello_comp = <Hello />;
 export default Hello_comp;
@@ -115,7 +115,7 @@ import ReactDOM from 'react-dom';
 
 class Hello extends React. Component {
   render() {
-    return <h1>Hello, from Guru99 Tutorials!</h1>;
+    return <h1>Hello, From RseeTech!</h1>;
   }
 }
 export default Hello;
@@ -146,7 +146,7 @@ Every React Component has a lifecycle of its own, lifecycle of a component can b
 ![Alt text](image.png)
 
 
-# Initialization: In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
+1. Initialization: In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
 class Clock extends React.Component {
 	constructor(props)
 	{

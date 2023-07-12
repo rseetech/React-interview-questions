@@ -143,10 +143,13 @@ ReactDOM.render(
 4. ### ReactJS | Lifecycle of Components
 Every React Component has a lifecycle of its own, lifecycle of a component can be defined as the series of methods that are invoked in different stages of the component’s existence.
 
-•	**Initialization:** This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
-•	**Mounting:** Mounting is the stage of rendering the JSX returned by the render method itself.
-•	**Updating:** Updating is the stage when the state of a component is updated and the application is repainted.
-•	**Unmounting:** As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
+1.	**Initialization:** This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
+
+2.	**Mounting:** Mounting is the stage of rendering the JSX returned by the render method itself.
+
+3.	**Updating:** Updating is the stage when the state of a component is updated and the application is repainted.
+
+4.	**Unmounting:** As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
 
 
 1. **Initialization:** In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
@@ -163,8 +166,8 @@ class Clock extends React.Component {
 }
 
  2. **Mounting:** Mounting is the phase of the component lifecycle when the initialization of the component is completed and the component is mounted on the DOM and rendered for the first time on the webpage.
-•	componentWillMount() Function: As the name clearly suggests, this function is invoked right before the component is mounted on the DOM i.e. this function gets invoked once before the render() function is executed for the first time.
-•	componentDidMount() Function: Similarly as the previous one this function is invoked right after the component is mounted on the DOM i.e. this function gets invoked once after the render() function is executed for the first time
+1.	componentWillMount() Function: As the name clearly suggests, this function is invoked right before the component is mounted on the DOM i.e. this function gets invoked once before the render() function is executed for the first time.
+2.	componentDidMount() Function: Similarly as the previous one this function is invoked right after the component is mounted on the DOM i.e. this function gets invoked once after the render() function is executed for the first time
 
 3. **Updation:** React is a JS library that helps create Active web pages easily. Now active web pages are specific pages that behave according to their user.
 componentWillRecieveProps() Function: This is a Props exclusive Function and is independent of States. This function is invoked before a mounted component gets its props reassigned. The function is passed the new set of Props which may or may not be identical to the original Props.
@@ -176,14 +179,15 @@ componentWillRecieveProps(newProps)
 		// Use this.setState() to rerender the page.
 	}
 }
-•	**setState() Function:** This is not particularly a Lifecycle function and can be invoked explicitly at any instant. This function is used to update the state of a component. You may refer to this article for detailed information.
-•	**shouldComponentUpdate() Function:** By default, every state or props update re-render the page but this may not always be the desired outcome, sometimes it is desired that updating the page will not be repainted. The shouldComponentUpdate() Function fulfills the requirement by letting React know whether the component’s output will be affected by the update or not.
+1.	**setState() Function:** This is not particularly a Lifecycle function and can be invoked explicitly at any instant. This function is used to update the state of a component. You may refer to this article for detailed information.
+2.	**shouldComponentUpdate() Function:** By default, every state or props update re-render the page but this may not always be the desired outcome, sometimes it is desired that updating the page will not be repainted. The shouldComponentUpdate() Function fulfills the requirement by letting React know whether the component’s output will be affected by the update or not.
 
-•	**componentWillUpdate() Function:** As the name clearly suggests, this function is invoked before the component is rerendered i.e. this function gets invoked once before the render() function is executed after the updation of State or Props.
-•	**componentDidUpdate() Function:** Similarly this function is invoked after the component is rerendered i.e. this function gets invoked once after the render() function is executed after the updation of State or Props.
+3.	**componentWillUpdate() Function:** As the name clearly suggests, this function is invoked before the component is rerendered i.e. this function gets invoked once before the render() function is executed after the updation of State or Props.
+4.	**componentDidUpdate() Function:** Similarly this function is invoked after the component is rerendered i.e. this function gets invoked once after the render() function is executed after the updation of State or Props.
 
-4. **Unmounting:** This is the final phase of the lifecycle of the component that is the phase of unmounting the component              from the DOM. The following function is the sole member of this phase.
-•	**componentWillUnmount() Function:** This function is invoked before the component is finally unmounted from the DOM i.e. this function gets invoked once before the component is removed from the page and this denotes the end of the lifecycle.
+4. **Unmounting:** This is the final phase of the lifecycle of the component that is the phase of unmounting the component from the DOM. 
+The following function is the sole member of this phase.
+1.	**componentWillUnmount() Function:** This function is invoked before the component is finally unmounted from the DOM i.e. this function gets invoked once before the component is removed from the page and this denotes the end of the lifecycle.
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -245,20 +249,23 @@ ReactDOM.render(
 **[⬆ Back to Top](#table-of-contents)**
 
 4. ### Why we use JSX?
-It is faster than regular JavaScript because it performs optimization while translating the code to JavaScript.
-Instead of separating technologies by putting markup and logic in separate files, React uses components that contain both.
-t is type-safe, and most of the errors can be found at compilation time.
-It makes easier to create templates.
+
+   It is faster than regular JavaScript because it performs optimization while translating the code to JavaScript.
+   Instead of separating technologies by putting markup and logic in separate files, React uses components that contain both.
+   t is type-safe, and most of the errors can be found at compilation time.
+   It makes easier to create templates.
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### Why can't browsers read JSX?
-Browsers cannot read JSX directly because they can only understand JavaScript objects, and JSX is not a regular JavaScript object. Thus, we need to transform the JSX file into a JavaScript object using transpilers like Babel and then pass it to the browser.
+
+   Browsers cannot read JSX directly because they can only understand JavaScript objects, and JSX is not a regular JavaScript object. Thus, we need to transform the JSX file into a JavaScript object using transpilers like Babel and then pass it to the browser.
 
    **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What do you understand by Virtual DOM?
-A virtual DOM is a lightweight JavaScript object which originally is just a copy of the real DOM. It is a node tree that lists the elements, their attributes and content as Objects and their properties. React’s render function creates a node tree out of the React components. It then updates this tree in response to the mutations in the data model which is caused by various actions done by the user or by the system.
+
+   A virtual DOM is a lightweight JavaScript object which originally is just a copy of the real DOM. It is a node tree that lists the elements, their attributes and content as Objects and their properties. React’s render function creates a node tree out of the React components. It then updates this tree in response to the mutations in the data model which is caused by various actions done by the user or by the system.
 
 
    **[⬆ Back to Top](#table-of-contents)**

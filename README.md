@@ -48,35 +48,35 @@
 **[⬆ Back to Top](#table-of-contents)**
 
 4. ### Advantages of ReactJS
-Here, are important pros/benefits of using ReactJS:
-```
-•	ReactJS uses virtual dom that makes use of in-memory data-structure cache, and only the final changes are updated in browsers dom. This makes the app faster.
-•	You can create components of your choice by using the react component feature. The components can be reused and also helpful in code maintenance.
-•	Reactjs is an open-source javascript library, so it is easy to start with.
-•	ReactJS has become very popular in a short span and maintained by Facebook and Instagram. It is used by many famous companies like Apple, Netflix, etc.
-•	Facebook maintains ReactJS, the library, so it is well maintained and kept updated.
-•	ReactJS can be used to develop rich UI for both desktop and mobile apps.
-•	Easy to debug and test as most of the coding is done in Javascript rather than on Html.
-•	Easy to Learn and USe. ReactJS is much easier to learn and use. ...
-•	Creating Dynamic Web Applications Becomes Easier. ...
-•	Reusable Components. ...
-•	Performance Enhancement. ...
-•	The Support of Handy Tools. ...
-•	Known to be SEO Friendly. ...
-•	The Benefit of Having JavaScript Library. ...
-•	Scope for Testing the Codes.
-```
+   Here, are important pros/benefits of using ReactJS:
+
+   •	ReactJS uses virtual dom that makes use of in-memory data-structure cache, and only the final changes are updated in browsers dom. This makes the app faster.
+   •	You can create components of your choice by using the react component feature. The components can be reused and also helpful in code maintenance.
+   •	Reactjs is an open-source javascript library, so it is easy to start with.
+   •	ReactJS has become very popular in a short span and maintained by Facebook and Instagram. It is used by many famous companies like Apple, Netflix, etc.
+   •	Facebook maintains ReactJS, the library, so it is well maintained and kept updated.
+   •	ReactJS can be used to develop rich UI for both desktop and mobile apps.
+   •	Easy to debug and test as most of the coding is done in Javascript rather than on Html.
+   •	Easy to Learn and USe. ReactJS is much easier to learn and use. ...
+   •	Creating Dynamic Web Applications Becomes Easier. ...
+   •	Reusable Components. ...
+   •	Performance Enhancement. ...
+   •	The Support of Handy Tools. ...
+   •	Known to be SEO Friendly. ...
+   •	The Benefit of Having JavaScript Library. ...
+   •	Scope for Testing the Codes.
+
 
 **[⬆ Back to Top](#table-of-contents)**
 
 4. ### Disadvantages of ReactJS
-Here, are cons/ drawbacks of using ReactJS:
-•	Most of the code is written in JSX, i.e., Html and css are part of javascript, it can be quite confusing as most other frameworks prefer keeping Html separate from the javascript code.
-•	The file size of ReactJS is large.
-•	The high pace of development. 
-•	Poor Documentation.
-•	View Part. 
-•	JSX as a barrier.
+   Here, are cons/ drawbacks of using ReactJS:
+   1.	Most of the code is written in JSX, i.e., Html and css are part of javascript, it can be quite confusing as most other frameworks prefer keeping Html separate from the javascript code.
+   2.	The file size of ReactJS is large.
+   3.	The high pace of development. 
+   4.	Poor Documentation.
+   5.	View Part. 
+   6.	JSX as a barrier.
 
 **[⬆ Back to Top](#table-of-contents)**
 

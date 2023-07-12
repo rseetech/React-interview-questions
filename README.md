@@ -170,7 +170,7 @@
 
    2. **Mounting:** Mounting is the phase of the component lifecycle when the initialization of the component is completed and the component is mounted on the DOM and rendered for the first time on the webpage.
 
-      1.	componentWillMount() Function: As the name clearly suggests, this function is invoked right before the component is mounted on the DOM i.e. this function gets invoked once before the render() function is executed for the first time.
+      1.	**componentWillMount() Function:** As the name clearly suggests, this function is invoked right before the component is mounted on the DOM i.e. this function gets invoked once before the render() function is executed for the first time.
 
       2.	**componentDidMount() Function:** Similarly as the previous one this function is invoked right after the component is mounted on the DOM i.e. this function gets invoked once after the render() function is executed for the first time
 
@@ -219,21 +219,21 @@
          componentDidMount()
          {
             console.log("componentDidMount()");
-      }
+         }
 
          changeState()
          {
-            this.setState({ hello : "Geek!" });
+            this.setState({ hello : "Ramesh!" });
          }
 
          render()
          {
             return (
                <div>
-               <h1>GeeksForGeeks.org, Hello{ this.state.hello }</h1>
-               <h2>
-               <a onClick={this.changeState.bind(this)}>Press Here!</a>
-               </h2>
+                  <h1>Hello{ this.state.hello }</h1>
+                  <h2>
+                     <a onClick={this.changeState.bind(this)}>Press Here!</a>
+                  </h2>
                </div>);
          }
 
@@ -254,9 +254,7 @@
          }
       }
 
-      ReactDOM.render(
-         <Test />,
-         document.getElementById('root'));
+      ReactDOM.render(<Test />, document.getElementById('root'));
       ```
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -264,8 +262,8 @@
 9. ### Why we use JSX?
 
    It is faster than regular JavaScript because it performs optimization while translating the code to JavaScript.
-   Instead of separating technologies by putting markup and logic in separate files, React uses components that contain both.
-   t is type-safe, and most of the errors can be found at compilation time.
+
+   Instead of separating technologies by putting markup and logic in separate files, React uses components that contain both. t is type-safe, and most of the errors can be found at compilation time.
    It makes easier to create templates.
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -279,7 +277,6 @@
 11. ### What do you understand by Virtual DOM?
 
    A virtual DOM is a lightweight JavaScript object which originally is just a copy of the real DOM. It is a node tree that lists the elements, their attributes and content as Objects and their properties. React’s render function creates a node tree out of the React components. It then updates this tree in response to the mutations in the data model which is caused by various actions done by the user or by the system.
-
 
    **[⬆ Back to Top](#table-of-contents)**
 

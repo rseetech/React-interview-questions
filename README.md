@@ -40,31 +40,31 @@
 
 4. ### What are the major features of React?
    The major features of React are:
-   •	It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
-   •	Supports server-side rendering. / server-side rendering (SSR)
-   •	Follows Unidirectional data flow or data binding.
-   •	Uses reusable/composable UI components to develop the view.
+   1.	It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
+   2.	Supports server-side rendering. / server-side rendering (SSR)
+   3.	Follows Unidirectional data flow or data binding.
+   4.	Uses reusable/composable UI components to develop the view.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 4. ### Advantages of ReactJS
    Here, are important pros/benefits of using ReactJS:
 
-   •	ReactJS uses virtual dom that makes use of in-memory data-structure cache, and only the final changes are updated in browsers dom. This makes the app faster.
-   •	You can create components of your choice by using the react component feature. The components can be reused and also helpful in code maintenance.
-   •	Reactjs is an open-source javascript library, so it is easy to start with.
-   •	ReactJS has become very popular in a short span and maintained by Facebook and Instagram. It is used by many famous companies like Apple, Netflix, etc.
-   •	Facebook maintains ReactJS, the library, so it is well maintained and kept updated.
-   •	ReactJS can be used to develop rich UI for both desktop and mobile apps.
-   •	Easy to debug and test as most of the coding is done in Javascript rather than on Html.
-   •	Easy to Learn and USe. ReactJS is much easier to learn and use. ...
-   •	Creating Dynamic Web Applications Becomes Easier. ...
-   •	Reusable Components. ...
-   •	Performance Enhancement. ...
-   •	The Support of Handy Tools. ...
-   •	Known to be SEO Friendly. ...
-   •	The Benefit of Having JavaScript Library. ...
-   •	Scope for Testing the Codes.
+   1.	ReactJS uses virtual dom that makes use of in-memory data-structure cache, and only the final changes are updated in browsers dom. This makes the app faster.
+   2.	You can create components of your choice by using the react component feature. The components can be reused and also helpful in code maintenance.
+   3.	Reactjs is an open-source javascript library, so it is easy to start with.
+   4.	ReactJS has become very popular in a short span and maintained by Facebook and Instagram. It is used by many famous companies like Apple, Netflix, etc.
+   5.	Facebook maintains ReactJS, the library, so it is well maintained and kept updated.
+   6.	ReactJS can be used to develop rich UI for both desktop and mobile apps.
+   7.	Easy to debug and test as most of the coding is done in Javascript rather than on Html.
+   8.	Easy to Learn and USe. ReactJS is much easier to learn and use. ...
+   9.	Creating Dynamic Web Applications Becomes Easier. ...
+   10. Reusable Components. ...
+   11. Performance Enhancement. ...
+   12. The Support of Handy Tools. ...
+   13. Known to be SEO Friendly. ...
+   14. The Benefit of Having JavaScript Library. ...
+   15. Scope for Testing the Codes.
 
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -82,6 +82,7 @@
 
 4. ### What are Components in ReactJS?
 Components are like pure javascript functions that help make the code easy by splitting the logic into reusable independent code.
+
 **Functions Components**
 Functional components are some of the more common components that will come across while working in React. These are simply JavaScript functions. We can create a functional component to React by writing a JavaScript function. These functions may or may not receive data as parameters. In the functional Components, the return value is the JSX code to render to the DOM tree.
 ```

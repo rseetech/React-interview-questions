@@ -9,9 +9,61 @@
 
 | No. | Questions                                                                                                                                                         |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | [Introduction to React](#introduction-to-react)                                         |
-| 2   | [What is React?](#what-is-react?)                                                        |
-| 3   | [Features of React](#features-of-react)                                                        |
+| 1   | [Introduction to React](#introduction-to-react)           |
+| 2   | [What is React?](#what-is-react?)                         |
+| 3   | [Features of React](#features-of-react)                   |
+| 4   | [What are the major features of React](#What are the major features of React)                   |
+| 5   | [Advantages of ReactJS](#Advantages of ReactJS)                   |
+| 6   | [Disadvantages of ReactJS ](#Disadvantages of ReactJS)                   |
+| 7   | [What are Components in ReactJS? ](#What are Components in ReactJS?)                   |
+| 8   | [ReactJS | Lifecycle of Components ](#ReactJS | Lifecycle of Components)                   |
+| 9   | [Why we use JSX ](#Why we use JSX)                   |
+| 10  | [Why can't browsers read JSX? ](#Why can't browsers read JSX?)                   |
+| 11  | [What do you understand by Virtual DOM? ](#What do you understand by Virtual DOM?)                   |
+| 12  | [How Virtual DOM works? ](#How Virtual DOM works?)                   |
+| 13  | [What is the difference between Real DOM and Virtual DOM? ](#What is the difference between Real DOM and Virtual DOM?)                   |
+| 14  | [What is the difference between Shadow DOM and Virtual DOM? ](#What is the difference between Shadow DOM and Virtual DOM?)                   |
+| 14  | [How different is React’s ES6 syntax when compared to ES5? ](#How different is React’s ES6 syntax when compared to ES5?)                   |
+| 14  | [What is the purpose of render() in React ](#What is the purpose of render() in React)                   |
+| 14  | [How can you embed two or more components into one? ](#How can you embed two or more components into one?)                   |
+| 14  | [What is Props? ](#What is Props?)                   |
+| 14  | [What is state in React? ](#What is state in React?)                   |
+| 14  | [What is the difference between state and props? ](#What is the difference between state and props?)                   |
+| 14  | [Why should we not update the state directly? ](#Why should we not update the state directly?)                   |
+| 14  | [What are synthetic events in React? ](#What are synthetic events in React?)                   |
+| 14  | [What is the use of refs? ](#What is the use of refs?)                   |
+| 14  | [What are Higher-Order Components? ](#What are Higher-Order Components?)                   |
+| 14  | [What is context? ](#What is context?)                   |
+| 14  | [How to write comments in React? ](#How to write comments in React?)                   |
+| 14  | [What are fragments? ](#What are fragments?)                   |
+| 14  | [Why fragments are better than container divs? ](#Why fragments are better than container divs?)                   |
+| 14  | [What is React Router? ](#What is React Router?)                   |
+| 14  | [What are the components of React Router v4? ](#What are the components of React Router v4?)                   |
+| 14  | [How to implement default or NotFound page? ](#How to implement default or NotFound page?)                   |
+| 14  | [How to perform automatic redirect after login? ](#How to perform automatic redirect after login?)                   |
+| 14  | [What Are React Hooks? ](#What Are React Hooks?)                   |
+| 14  | [What are the benefits of using React Hooks? ](#What are the benefits of using React Hooks?)                   |
+| 14  | [React Hook Types ](#React Hook Types)                   |
+| 14  | [Working example of useReducer hook. ](#Working example of useReducer hook.)                   |
+| 14  | [How is useMemo different from useCallback? ](#How is useMemo different from useCallback?)                   |
+| 14  | [Use Custom Hooks For Sharing Application Logic ](#Use Custom Hooks For Sharing Application Logic)                   |
+| 14  | [What Is React Redux and How Do You Use it? ](#What Is React Redux and How Do You Use it?)                   |
+| 14  | [Why Use Redux? ](#Why Use Redux?)                   |
+| 14  | [Show how the data flows through Redux? ](#Show how the data flows through Redux?)                   |
+| 14  | [List down the components of Redux. ](#List down the components of Redux.)                   |
+| 14  | [Redux-Saga ](#Redux-Saga)                   |
+| 14  | [What are the differences between call() and put() in redux-saga? ](#What are the differences between call() and put() in redux-saga?)                   |
+| 14  | [How do you handle data persistence in a React application? ](#How do you handle data persistence in a React application?)                   |
+| 14  | [react-error-boundary ](#react-error-boundary)                   |
+| 14  | [Why you should use Error Boundaries in React ](#Why you should use Error Boundaries in React)                   |
+| 14  | [How do you handle performance optimization in a React application? ](#How do you handle performance optimization in a React application?)                   |
+| 14  | [How do you handle data validation in a React application? ](#How do you handle data validation in a React application?)                   |
+| 14  | [How do you handle security in a React application? ](#How do you handle security in a React application?)                   |
+| 14  | [What is a promise ](#What is a promise)                   |
+| 14  | [Why do you need a promise ](#Why do you need a promise)                   |
+| 14  | [What are the three states of promise ](#What are the three states of promise)                   |
+| 14  | [What is promise.all ](#What is promise.all)                   |
+
                               
 
 1. ### Introduction to React
@@ -299,7 +351,7 @@
    ![Alt text](image-2.png)
 
    iii.	Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
-   
+
    ![Alt text](image-3.png)
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -504,7 +556,6 @@
 28. ### What are fragments?
    It's common pattern in React which is used for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
 
-      ```
       render() {
          return (
             <React.Fragment>
@@ -514,11 +565,9 @@
             </React.Fragment>
          )
       }
-      ```
 
       There is also a shorter syntax, but it's not supported in many tools:
 
-      ```
       render() {
          return (
             <>
@@ -528,7 +577,7 @@
             </>
          )
       }
-      ```
+   
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -536,11 +585,11 @@
 
    Below are the list of reasons,
 
-      1.	Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
+   1.	Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
 
-      2.	Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
+   2.	Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
 
-      3.	The DOM Inspector is less cluttered.
+   3.	The DOM Inspector is less cluttered.
 
    **[⬆ Back to Top](#table-of-contents)**
 

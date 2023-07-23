@@ -8,9 +8,9 @@
 ### Table of Contents
 
 | No. | Questions                                                                              |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | [Introduction to React](#introduction-to-react)           |
-| 2   | [What is React?](#what-is-react?)                         |
+| 2   | [What is React?](#what-is-react)                        |
 | 3   | [Features of React](#features-of-react)                   |
 | 4   | [What are the major features of React](#what-are-the-major-features-of-react)                   |
 | 5   | [Advantages of ReactJS](#advantages-of-reactjs)                   |
@@ -18,46 +18,46 @@
 | 7   | [What are Components in ReactJS? ](#what-are-components-in-reactjs)                   |
 | 8   | [ReactJS-Lifecycle of Components ](#Rreactjs-lifecycle-of-components)                   |
 | 9   | [Why we use JSX ](#why-we-use-jsx)                   |
-| 10  | [Why can't browsers read JSX? ](#why-can't-browsers-read-jsx?)                   |
+| 10  | [Why can't browsers read JSX? ](#why-can't-browsers-read-jsx)                  |
 | 11  | [What do you understand by Virtual DOM? ](#what-do-you-understand-by-virtual-dom)         |
-| 12  | [How Virtual DOM works? ](#how-virtual-dom-works?)              |
-| 13  | [What is the difference between Real DOM and Virtual DOM? ](#what-is-the-difference-between-real-dom-and-virtual-dom?)   |
-| 14  | [What is the difference between Shadow DOM and Virtual DOM? ](#what-is-the-difference-between-shadow-dom-and-virtual-dom?)     |
-| 15  | [How different is React’s ES6 syntax when compared to ES5? ](#how-different-is-react’s-es6-syntax-when-compared-to-es5?)       |
-| 16  | [What is the purpose of render() in React ](#what-is-the-purpose-of-render()-in-react)         |
-| 17  | [How can you embed two or more components into one? ](#how-can-you-embed-two-or-more-components-into-one?)  |
-| 18  | [What is Props? ](#what-is-props?)      |
-| 19  | [What is state in React? ](#what-is-state-in-react?)        |
-| 20  | [What is the difference between state and props? ](#what-is-the-difference-between-state-and-props?)|
-| 21  | [Why should we not update the state directly? ](#why-should-we-not-update-the-state-directly?)    |
-| 22  | [What are synthetic events in React? ](#what-are-synthetic-events-in-react?)             |
-| 23  | [What is the use of refs? ](#what-is-the-use-of-refs?)    |
-| 24  | [What are Higher-Order Components? ](#what-are-higher-order-components?)      |
-| 25  | [What is context? ](#what-is-context?)           |
-| 26  | [How to write comments in React? ](#how-to-write-comments-in-react?)        |
-| 27  | [What are fragments? ](#what-are-fragments?)        |
-| 28  | [Why fragments are better than container divs? ](#why-fragments-are-better-than-container-divs?)  |
-| 29  | [What is React Router? ](#what-is-react-router?)                   |
-| 30  | [What are the components of React Router v4? ](#what-are-the-components-of-react-router-v4?)                   |
-| 31  | [How to implement default or NotFound page? ](#how-to-implement-default-or-notfound-page?)                   |
-| 32  | [How to perform automatic redirect after login? ](#how-to-perform-automatic-redirect-after-login?)                   |
-| 33  | [What Are React Hooks? ](#what-are-react-hooks?)                   |
-| 34  | [What are the benefits of using React Hooks? ](#what-are-the-benefits-of-using-react-hooks?)                   |
+| 12  | [How Virtual DOM works? ](#how-virtual-dom-works)             |
+| 13  | [What is the difference between Real DOM and Virtual DOM? ](#what-is-the-difference-between-real-dom-and-virtual-dom)  |
+| 14  | [What is the difference between Shadow DOM and Virtual DOM? ](#what-is-the-difference-between-shadow-dom-and-virtual-dom)    |
+| 15  | [How different is Reacts ES6 syntax when compared to ES5? ](#how-different-is-reacts-es6-syntax-when-compared-to-es5)      |
+| 16  | [What is the purpose of render() in React ](#what-is-the-purpose-of-render-in-react)         |
+| 17  | [How can you embed two or more components into one? ](#how-can-you-embed-two-or-more-components-into-one) |
+| 18  | [What is Props? ](#what-is-props)     |
+| 19  | [What is state in React? ](#what-is-state-in-react)       |
+| 20  | [What is the difference between state and props? ](#what-is-the-difference-between-state-and-props)|
+| 21  | [Why should we not update the state directly? ](#why-should-we-not-update-the-state-directly)   |
+| 22  | [What are synthetic events in React? ](#what-are-synthetic-events-in-react)            |
+| 23  | [What is the use of refs? ](#what-is-the-use-of-refs)   |
+| 24  | [What are Higher-Order Components? ](#what-are-higher-order-components)     |
+| 25  | [What is context? ](#what-is-context)          |
+| 26  | [How to write comments in React? ](#how-to-write-comments-in-react)       |
+| 27  | [What are fragments? ](#what-are-fragments)       |
+| 28  | [Why fragments are better than container divs? ](#why-fragments-are-better-than-container-divs) |
+| 29  | [What is React Router? ](#what-is-react-router)                  |
+| 30  | [What are the components of React Router v4? ](#what-are-the-components-of-react-router-v4)                  |
+| 31  | [How to implement default or NotFound page? ](#how-to-implement-default-or-notfound-page)                  |
+| 32  | [How to perform automatic redirect after login? ](#how-to-perform-automatic-redirect-after-login)                  |
+| 33  | [What Are React Hooks? ](#what-are-react-hooks)                  |
+| 34  | [What are the benefits of using React Hooks? ](#what-are-the-benefits-of-using-react-hooks)                  |
 | 35  | [React Hook Types ](#react-hook-types)                   |
 | 36  | [Working example of useReducer hook. ](#working-example-of-usereducer-hook.)                   |
-| 37  | [How is useMemo different from useCallback? ](#how-is-usememo-different-from-usecallback?)                   |
+| 37  | [How is useMemo different from useCallback? ](#how-is-usememo-different-from-usecallback)                  |
 | 38  | [Use Custom Hooks For Sharing Application Logic ](#use-custom-hooks-for-sharing-application-logic)                   |
-| 39  | [What Is React Redux and How Do You Use it? ](#what-is-react-redux-and-how-do-you-use-it?)                   |
-| 40  | [Why Use Redux? ](#why-use-redux?)                   |
-| 41  | [Show how the data flows through Redux? ](#show-how-the-data-flows-through-redux?)        |
+| 39  | [What Is React Redux and How Do You Use it? ](#what-is-react-redux-and-how-do-you-use-it)                  |
+| 40  | [Why Use Redux? ](#why-use-redux)                  |
+| 41  | [Show how the data flows through Redux? ](#show-how-the-data-flows-through-redux)       |
 | 42  | [List down the components of Redux. ](#list-down-the-components-of-redux.)        |
 | 43  | [Redux-Saga ](#redux-saga)                   |
-| 44  | [What are the differences between call() and put() in redux-saga? ](#what-are-the-differences-between-call()-and-put()-in-redux-saga?)       |
+| 44  | [What are the differences between call() and put() in redux-saga? ](#what-are-the-differences-between-call()-and-put()-in-redux-saga)      |
 | 45  | [How do you handle data persistence in a React application? ](#how-do-you-handle-data-persistence-in-a-react-application?)|
 | 46  | [react-error-boundary ](#react-error-boundary)       |
 | 47  | [Why you should use Error Boundaries in React ](#why-you-should-use-error-boundaries-in-react)   |
-| 48  | [How do you handle performance optimization in a React application? ](#how-do-you-handle-performance-optimization-in-a-react-application?)        |
-| 49  | [How do you handle data validation in a React application? ](#how-do-you-handle-data-validation-in-a-react-application?)  |
+| 48  | [How do you handle performance optimization in a React application? ](#how-do-you-handle-performance-optimization-in-a-react-application)       |
+| 49  | [How do you handle data validation in a React application? ](#how-do-you-handle-data-validation-in-a-react-application) |
 | 50  | [How do you handle security in a React application? ](#how-do-you-handle-security-in-a-react-application?)|
 | 51  | [What is a promise ](#what-is-a-promise)      |
 | 52  | [Why do you need a promise ](#why-do-you-need-a-promise)     |
@@ -192,7 +192,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-8. ### ReactJS | Lifecycle of Components
+8. ### ReactJS Lifecycle of Components
    Every React Component has a lifecycle of its own, lifecycle of a component can be defined as the series of methods that are invoked in different stages of the component’s existence.
 
    1.	**Initialization:** This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
@@ -378,7 +378,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-16. ### How different is React’s ES6 syntax when compared to ES5?
+16. ### How different is Reacts ES6 syntax when compared to ES5?
 
    Syntax has changed from ES5 to ES6 in the following aspects:
 
@@ -400,7 +400,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-17. ### What is the purpose of render() in React.
+17. ### What is the purpose of render in React.
 
    Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as `<form>`, `<group>`,`<div>` etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
 
@@ -830,6 +830,8 @@
    An intuitive Redux side effect manager.
 
    Easy to manage, easy to test, and executes efficiently.
+
+   **[⬆ Back to Top](#table-of-contents)**
 
 3. ### What are the differences between call() and put() in redux-saga?
 

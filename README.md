@@ -1009,7 +1009,9 @@
    Promises have three states:
 
    i.	**Pending:** This is an initial state of the Promise before an operation begins
+
    ii. **Fulfilled:** This state indicates that the specified operation was completed.
+   
    iii. **Rejected:** This state indicates that the operation did not complete. In this case an error value will be thrown.
 
    **[⬆ Back to Top](#table-of-contents)**

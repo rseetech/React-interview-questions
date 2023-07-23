@@ -1008,9 +1008,9 @@
 
    Promises have three states:
 
-      i.	**Pending:** This is an initial state of the Promise before an operation begins
-      ii. **Fulfilled:** This state indicates that the specified operation was completed.
-      iii. **Rejected:** This state indicates that the operation did not complete. In this case an error value will be thrown.
+   i.	**Pending:** This is an initial state of the Promise before an operation begins
+   ii. **Fulfilled:** This state indicates that the specified operation was completed.
+   iii. **Rejected:** This state indicates that the operation did not complete. In this case an error value will be thrown.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -1018,12 +1018,11 @@
 
    Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets resolved when all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all method is below,
    
-      ```
-         Promise.all([Promise1, Promise2, Promise3]) 
-            .then(result) => {   console.log(result) }
-            .catch(error => console.log(`Error in promises ${error}`))
 
-      ```
+   Promise.all([Promise1, Promise2, Promise3]) 
+      .then(result) => {   console.log(result) }
+      .catch(error => console.log(`Error in promises ${error}`))
+
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -1123,4 +1122,4 @@
 
    Here’s the picture, taken from the specification, of the capturing (1), target (2) and bubbling (3) phases for a click event on a <td> inside a table: 
 
-   **[⬆ Back to Top](#table-of-contents)**s
+   **[⬆ Back to Top](#table-of-contents)**

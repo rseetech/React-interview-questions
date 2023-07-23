@@ -62,7 +62,7 @@
 | 51  | [What is a promise ](#what-is-a-promise)      |
 | 52  | [Why do you need a promise ](#why-do-you-need-a-promise)     |
 | 53  | [What are the three states of promise ](#what-are-the-three-states-of-promise)       |
-| 54  | [What is promise.all ](#what-is-promise.all)     |
+| 54  | [What is promise.all ](#what-is-promise-all)     |
 
                               
 

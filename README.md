@@ -62,7 +62,7 @@
 | 51  | [What is a promise ](#what-is-a-promise)      |
 | 52  | [Why do you need a promise ](#why-do-you-need-a-promise)     |
 | 53  | [What are the three states of promise ](#what-are-the-three-states-of-promise)       |
-| 54  | [What is promise.all ](#what-is-promise-all)     |
+| 54  | [What is promise all ](#what-is-promise-all)     |
 
                               
 
@@ -1006,7 +1006,7 @@
       ii. **Fulfilled:** This state indicates that the specified operation was completed.
       iii. **Rejected:** This state indicates that the operation did not complete. In this case an error value will be thrown.
 
-3. ### What is promise.all
+3. ### What is promise all
 
    Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets resolved when all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all method is below,
    

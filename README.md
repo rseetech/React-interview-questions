@@ -15,11 +15,11 @@
 | 4   | [What are the major features of React](#what-are-the-major-features-of-react)                   |
 | 5   | [Advantages of ReactJS](#advantages-of-reactjs)                   |
 | 6   | [Disadvantages of ReactJS ](#disadvantages-of-reactjs)                   |
-| 7   | [What are Components in ReactJS? ](#what-are-components-in-reactjs?)                   |
-| 8   | [ReactJS | Lifecycle of Components ](#Rreactjs-|-lifecycle-of-components)                   |
+| 7   | [What are Components in ReactJS? ](#what-are-components-in-reactjs)                   |
+| 8   | [ReactJS-Lifecycle of Components ](#Rreactjs-lifecycle-of-components)                   |
 | 9   | [Why we use JSX ](#why-we-use-jsx)                   |
 | 10  | [Why can't browsers read JSX? ](#why-can't-browsers-read-jsx?)                   |
-| 11  | [What do you understand by Virtual DOM? ](#what-do-you-understand-by-virtual-dom?)         |
+| 11  | [What do you understand by Virtual DOM? ](#what-do-you-understand-by-virtual-dom)         |
 | 12  | [How Virtual DOM works? ](#how-virtual-dom-works?)              |
 | 13  | [What is the difference between Real DOM and Virtual DOM? ](#what-is-the-difference-between-real-dom-and-virtual-dom?)   |
 | 14  | [What is the difference between Shadow DOM and Virtual DOM? ](#what-is-the-difference-between-shadow-dom-and-virtual-dom?)     |
@@ -994,10 +994,14 @@
          
       ```
 
+   **[⬆ Back to Top](#table-of-contents)**
+   
 2. ### Why do you need a promise
 
    Promises are used to handle asynchronous operations. They provide an alternative approach for callbacks by reducing the callback hell and writing the cleaner code.
 
+   **[⬆ Back to Top](#table-of-contents)**
+   
 3. ### What are the three states of promise
 
    Promises have three states:
@@ -1005,6 +1009,8 @@
       i.	**Pending:** This is an initial state of the Promise before an operation begins
       ii. **Fulfilled:** This state indicates that the specified operation was completed.
       iii. **Rejected:** This state indicates that the operation did not complete. In this case an error value will be thrown.
+
+   **[⬆ Back to Top](#table-of-contents)**
 
 3. ### What is promise all
 

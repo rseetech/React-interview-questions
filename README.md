@@ -49,20 +49,20 @@
 | 38  | [Use Custom Hooks For Sharing Application Logic ](#use-custom-hooks-for-sharing-application-logic)                   |
 | 39  | [What Is React Redux and How Do You Use it? ](#what-is-react-redux-and-how-do-you-use-it?)                   |
 | 40  | [Why Use Redux? ](#why-use-redux?)                   |
-| 41  | [Show how the data flows through Redux? ](#Show how the data flows through Redux?)                   |
-| 42  | [List down the components of Redux. ](#List down the components of Redux.)                   |
-| 43  | [Redux-Saga ](#Redux-Saga)                   |
-| 44  | [What are the differences between call() and put() in redux-saga? ](#What are the differences between call() and put() in redux-saga?)                   |
-| 45  | [How do you handle data persistence in a React application? ](#How do you handle data persistence in a React application?)                   |
-| 46  | [react-error-boundary ](#react-error-boundary)                   |
-| 47  | [Why you should use Error Boundaries in React ](#Why you should use Error Boundaries in React)                   |
-| 48  | [How do you handle performance optimization in a React application? ](#How do you handle performance optimization in a React application?)                   |
-| 49  | [How do you handle data validation in a React application? ](#How do you handle data validation in a React application?)                   |
-| 50  | [How do you handle security in a React application? ](#How do you handle security in a React application?)                   |
-| 51  | [What is a promise ](#What is a promise)                   |
-| 52  | [Why do you need a promise ](#Why do you need a promise)                   |
-| 53  | [What are the three states of promise ](#What are the three states of promise)                   |
-| 54  | [What is promise.all ](#What is promise.all)                   |
+| 41  | [Show how the data flows through Redux? ](#show-how-the-data-flows-through-redux?)        |
+| 42  | [List down the components of Redux. ](#list-down-the-components-of-redux.)        |
+| 43  | [Redux-Saga ](#redux-saga)                   |
+| 44  | [What are the differences between call() and put() in redux-saga? ](#what-are-the-differences-between-call()-and-put()-in-redux-saga?)       |
+| 45  | [How do you handle data persistence in a React application? ](#how-do-you-handle-data-persistence-in-a-react-application?)|
+| 46  | [react-error-boundary ](#react-error-boundary)       |
+| 47  | [Why you should use Error Boundaries in React ](#why-you-should-use-error-boundaries-in-react)   |
+| 48  | [How do you handle performance optimization in a React application? ](#how-do-you-handle-performance-optimization-in-a-react-application?)        |
+| 49  | [How do you handle data validation in a React application? ](#how-do-you-handle-data-validation-in-a-react-application?)  |
+| 50  | [How do you handle security in a React application? ](#how-do-you-handle-security-in-a-react-application?)|
+| 51  | [What is a promise ](#what-is-a-promise)      |
+| 52  | [Why do you need a promise ](#why-do-you-need-a-promise)     |
+| 53  | [What are the three states of promise ](#what-are-the-three-states-of-promise)       |
+| 54  | [What is promise.all ](#what-is-promise.all)     |
 
                               
 

@@ -291,10 +291,15 @@
    The Virtual DOM works in three simple steps.
 
    i.	Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+
    ![Alt text](image.png)
+
    ii.	Then the difference between the previous DOM representation and the new one is calculated.
+
    ![Alt text](image-2.png)
+
    iii.	Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+   
    ![Alt text](image-3.png)
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -460,12 +465,12 @@
    
    >  const EnhancedComponent = higherOrderComponent(WrappedComponent)
 
-      HOC can be used for many use cases:
+   HOC can be used for many use cases:
 
-         1.	Code reuse, logic and bootstrap abstraction.
-         2. Render hijacking.
-         3. State abstraction and manipulation.
-         4. Props manipulation.
+   1.	Code reuse, logic and bootstrap abstraction.
+   2. Render hijacking.
+   3. State abstraction and manipulation.
+   4. Props manipulation.
 
    **[⬆ Back to Top](#table-of-contents)**
 

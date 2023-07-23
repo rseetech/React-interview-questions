@@ -291,26 +291,17 @@
    The Virtual DOM works in three simple steps.
 
       i.	Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
-
       ![Alt text](image.png)
-
       ii.	Then the difference between the previous DOM representation and the new one is calculated.
-
       ![Alt text](image-2.png)
-
       iii.	Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
-
       ![Alt text](image-3.png)
-      
 
    **[⬆ Back to Top](#table-of-contents)**
 
    
 14. ### What is the difference between Real DOM and Virtual DOM?
-
-
    Below are the main differences between Real DOM and Virtual DOM,
-
       | Real DOM                                     | Virtual DOM                                     |
       | -------------------------------------------- | ----------------------------------------------- |
       | Updates are slow                             | Updates are fast                                |
@@ -318,7 +309,6 @@
       | You can update HTML directly.                | You Can’t directly update HTML                  |
       | It causes too much of memory wastage         | There is no memory wastage                      |
       | Creates a new DOM if element updates         | It updates the JSX if element update            |
-
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -840,6 +830,7 @@
    **[⬆ Back to Top](#table-of-contents)**
 
 2. ### Why you should use Error Boundaries in React
+
    React Error Boundaries were introduced in React version 16 to generate a fallback UI in case a component were to crash. This was to ensure that a JavaScript error in a single component should not crash the whole app.
 
    >  npm i react-error-boundary@3.0.2

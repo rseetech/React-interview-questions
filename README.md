@@ -8,9 +8,9 @@
 ### Table of Contents
 
 | No. | Questions                                                                                                                                                         |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | [Introduction to React](#introduction-to-react)                                         |
-| 2   | [What is React?](#what-is-react?)                                                                                                             |
+| 2   | [What is React?](#what-is-react?)                                                        |
 | 3   | [Features of React](#features-of-react)                                                        |
                               
 
@@ -151,6 +151,9 @@
 
    4.	**Unmounting:** As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
 
+
+   ![Alt text](image-6.png)
+   
 
    1. **Initialization:** In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
 
@@ -581,4 +584,431 @@
       }
    ```
 
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### What Are React Hooks?
+
+   React Hooks are a feature in React that allows developers to use state and other React features without writing a class component. Hooks are functions that let developers "hook into" the React state and lifecycle methods from a functional component.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### What are the benefits of using React Hooks?
+
+   Some benefits of using React Hooks are:
+
+   It allows for simpler and cleaner code.
+   Hooks make it easier to reuse stateful logic between components.
+   It allows developers to use state and other React features without writing a class component, which simplifies the component's structure.
+   It makes testing components easier because it is easier to test a function than a class.
+   It simplifies the management of component state and side effects.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### React Hook Types
+
+   1.	useState Hook
+   useState to Create State Variables
+      Update State Variables
+   1.	useReducer Hook
+   useReducer is (Another) Powerful State Management Tool
+   Reducers are simple, predictable (pure) functions that take a previous state object and an action object and return a new state object.
+   2.	useEffect Hook
+   useEffect to Perform Side Effects
+   Side effects are when we need to reach into the outside world. Such as fetching data from an API or working with the DOM.
+   3.	useRef Hook
+   useRef to Reference React Elements
+   4.	useCallback Hook
+   useCallback Prevents Callbacks from Being Recreated
+   Callback functions are the name of functions that are "called back" within a parent component.
+   5.	useMemo Hook
+   useMemo Can Improve Expensive Operations
+   useMemo allows us to memoize, or remember the result of expensive operations when they have already been made for certain inputs.
+   6.	useContext Hook
+   useContext Helps Us Avoid Prop Drilling
+   In some cases, it is fine to pass props through multiple components, but it is redundant to pass props through components which do not need it.
+
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+3. ### Working example of useReducer hook.
+
+   ```
+      function reducer(state, dispatch) {
+         switch(action.type) {
+            case 'increment':
+                  return state+1;
+            case 'decrement':
+                  return state-1;
+            default:
+                  throw new Error();
+         }
+      }
+
+      function useReducer() {
+         // state is the state we want to show in the UI.
+         const [state, dispatch] = React.useReducer(reducer, 0);
+
+         return (
+            <>
+            Count : {state}
+            <button onClick={() => dispatch({type:'decrement'})}>-</button>
+            <button onClick={() => dispatch({type:'increment'})}>+</button>
+            </>
+         )
+      }
+
+   ```
+   
+   **[⬆ Back to Top](#table-of-contents)**
+
+3. ### How is useMemo different from useCallback?
+
+   The main difference between useMemo and useCallback hook is, useMemo returns memoized value and useCallback returns memoised function.
+
+   #### Understanding useMemo
+
+      ```
+         import { React, useState, useMemo } from 'react';
+         import ChildComponent from './ChildComponent'
+
+         function App() {
+            const [num, setNum] = useState(0);
+            const getChildComp = useMemo(() => <ChildComponent />, []);
+            return(
+               <div>
+                  <h1>{num}</h1>
+                  {getChildComp}
+                  <button onClick={() => setNum(num + 1)}> Addition </button>
+               </div>
+            );
+            }
+
+      ```
+
+   #### Understanding useCallback
+
+      ```
+
+         import { React, useState } from 'react';
+         import ChildComponent from './ChildComponent'
+
+         function App() {
+         const [num, setNum] = useState(0);
+
+         const handleUpdateNum = () => {
+            //some code
+         };
+
+         const getChildComp = useMemo(
+            () => <ChildComponent handleUpdateNum={handleUpdateNum} />,
+            [handleUpdateNum]
+         );
+
+         return(
+            <div>
+               <h1>{num}</h1>
+               {getChildComp}
+               <button onClick={() => setNum(num + 1)}> Addition </button>
+            </div>
+         );
+         }
+
+      ```
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### Use Custom Hooks For Sharing Application Logic
+   You can extract your component’s logic into reusable functions as custom hooks with the release of React Hooks. You will find that some of the application logic will be used on several components repeatedly.
+      
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### What Is React Redux and How Do You Use it?
+
+   A predictable state container for JavaScript applications and Redux is an open-source JavaScript library used to manage application state.
+
+   Redux is simply a store to store the state of the variables in your app. Redux creates a process and procedures to interact with the store so that components will not just update or read the store randomly. Similar to the bank. It does not mean because you have money in the bank that you can go anytime, open the vault, and take money. You have to go through certain steps to withdrawal money.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+3. ### Why Use Redux?
+
+   #### for making data consist.
+
+   Well, an application has its state, which can be a combination of the states of its internal components.
+
+   Let's take an e-commerce website for example. An e-commerce website will have several components like the cart component, user profile component, previously viewed section component, and so on.
+
+   We'll take the cart component which displays the number of items in a user's cart. The state of the cart component will `**consist**` of all the items the user has added to the cart and the total number of those items. At all times the application is up and running, this component has to show the updated number of items in the user's cart.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### Show how the data flows through Redux?
+
+   ![Alt text](image-4.png)
+
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### List down the components of Redux.
+   Redux is composed of the following components:
+
+      i.	Action – It’s an object that describes what happened.
+
+      ii.	Reducer –  It is a place to determine how the state will change.
+
+      iii.	Store – State/ Object tree of the entire application is saved in the Store.
+
+      iv.	View – Simply displays the data provided by the Store.
+
+
+      ![Alt text](image-5.png)
+
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### Redux-Saga
+
+   An intuitive Redux side effect manager.
+
+   Easy to manage, easy to test, and executes efficiently.
+
+3. ### What are the differences between call() and put() in redux-saga?
+
+   Both `call()` and `put()` are effect creator functions. call() function is used to create effect description, which instructs middleware to call the promise. put() function creates an effect, which instructs middleware to dispatch an action to the store.
+   
+   **call():** is a blocking effect, which means that the saga will wait for promise resolving before moving on to the next step.
+   
+   **put() :**, on the other hand, is a non-blocking effect, which means that the saga can continue to the next step and action will be dispatched within internal scheduler.
+
+   ```
+      function* mySaga() {
+         // Dispatch an action to the store using put()
+         yield put({ type: "MY_ACTION" });
+
+         // Call a function and wait for the result using call()
+         const result = yield call(myFunction, "some argument");
+         // Dispatch another action to the store using put()
+         yield put({ type: "ANOTHER_ACTION", payload: result });
+      }
+
+   ```
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### How do you handle data persistence in a React application?
+
+   In a React application, data persistence can be handled using a variety of methods, including:
+
+      1.	Local storage: This allows you to store key-value pairs in the browser’s local storage, which can be retrieved even after the user closes the browser or restarts their device.
+
+      2.	Cookies: Cookies are small pieces of data that are stored in the user’s browser and can be accessed by the website on subsequent visits.
+
+      3.	IndexedDB: It’s a low-level API for client-side storage of large amounts of structured data, including files/blobs.
+
+      4.	Web SQL Database: This is a deprecated technology for storing data in a client-side database using SQL.
+
+      5.	Server-side storage: You can also store data on a remote server using an API or a database such as MySQL, MongoDB, etc.
+
+      6.	Redux or Mobx: State management libraries like Redux or Mobx can be used to manage and persist application state across different components and sessions.
+
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### react-error-boundary
+
+   Simple reusable React error boundary component
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### Why you should use Error Boundaries in React
+   React Error Boundaries were introduced in React version 16 to generate a fallback UI in case a component were to crash. This was to ensure that a JavaScript error in a single component should not crash the whole app.
+
+   >  npm i react-error-boundary@3.0.2
+
+      ```
+         class ErrorBoundary extends React.Component {
+            state = {error: null};
+            render() {
+               if (!this.state.error) return this.props.children;
+               else return <h1>Error!</h1>;
+            }
+            static getDerivedStateFromError(error) {
+               return {error};
+            }
+         }
+         
+         export const () => (
+            <App>
+               <ErrorBoundary>
+                     <Header>
+                     <ErrorBoundary>
+                        <Router />
+                     </ErrorBoundary>
+                     <Footer />
+               </ErrorBoundary>
+            </App>
+         );
+
+      ```
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### How do you handle performance optimization in a React application?
+
+   •	Using the React.memo method for functional components
+   •	Using React’s Context API instead of props drilling.
+   •	Using the useEffect hook to handle side effects in functional components.
+   •	Using the useCallback and useMemo hooks to prevent unnecessary re-renders and improve performance.
+   •	Lazy loading of components and code splitting.
+   •	Minimizing the number of DOM updates by using the key prop when rendering a list of items.
+   •	Using the useReducer hook to manage state updates instead of useState
+   •	Using a virtualized list library like react-virtualized, react-window etc.
+   •	It’s always a good idea to test performance with real-world use cases and user interactions before and after making any optimization.
+   •	Lazy loading: Lazy loading is a technique where you only load the components that are needed for the current view. This can greatly improve the performance of your application.
+   •	Code splitting: Code splitting is a technique where you split your application into smaller chunks of code that are loaded on demand. This can greatly improve the performance of your application.
+   •	Optimize the loading time of your application by using techniques like code minification, compression, and caching.
+   •	Code splitting:
+   •	Lazy loading
+   •	Use of a bundler such as Webpack
+   •	Use of caching
+   •	Use of efficient algorithms and data structures
+   •	Regular performance monitoring and profiling
+   •	Use of optimization techniques such as memorization
+
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### How do you handle data validation in a React application?
+
+   Data validation in a React application can be handled in a variety of ways, including:
+   1.	PropTypes: React provides a built-in library called PropTypes that allows you to specify the expected data types for your component’s props. PropTypes will validate the props passed to your component at runtime, and will log warnings in the browser console if any props are of the wrong type.
+
+   2.	Custom validation functions: You can write custom validation functions to check the validity of your data. These functions can be called inside your component, and can be used to set error messages or update the state to indicate invalid data.
+
+   3.	Third-party libraries: There are several third-party libraries available for data validation in React, such as yup, joi, or zod. These libraries provide a more powerful and flexible way to validate data, and often provide a more user-friendly way to report errors.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### How do you handle security in a React application?
+
+   Handling security in a React application involves multiple steps, including:
+   
+   Input validation: Validate all user inputs on the client and server side to prevent any malicious data from being processed.
+
+   Authenticating and authorizing users: Use a secure authentication mechanism such as JSON Web Tokens (JWT) to ensure that only authorized users can access sensitive data.
+
+   Storing sensitive data securely: Do not store sensitive information such as passwords and credit card numbers in local storage, use encrypted storage instead.
+
+   Implementing HTTPS: Use HTTPS to ensure secure communication between the client and server and protect against network attacks such as man-in-the-middle attacks.
+
+   Keeping dependencies up-to-date: Regularly update React and its dependencies to patch any known security vulnerabilities.
+
+   Using Content Security Policy (CSP): Implement a Content Security Policy (CSP) to restrict the types of resources that can be loaded in a React application and prevent cross-site scripting (XSS) attacks.
+
+   Regular security audits: Conduct regular security audits to identify and address potential security issues in a timely manner.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ### What is a promise
+   A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). 
+   
+   It will be in one of the 3 possible states: **fulfilled, rejected, or pending.**
+
+   The syntax of Promise creation looks like below,
+   
+      ```
+         const promise = new Promise(function (resolve, reject) {
+         // promise description
+         });
+         The usage of a promise would be as below,
+         const promise = new Promise(
+         (resolve) => {
+            setTimeout(() => {
+               resolve("I'm a Promise!");
+            }, 5000);
+         },
+         (reject) => {}
+         );
+
+         promise.then((value) => console.log(value));
+         
+      ```
+
+2. ### Why do you need a promise
+
+   Promises are used to handle asynchronous operations. They provide an alternative approach for callbacks by reducing the callback hell and writing the cleaner code.
+
+3. ### What are the three states of promise
+
+   Promises have three states:
+
+      i.	Pending: This is an initial state of the Promise before an operation begins
+      ii.	Fulfilled: This state indicates that the specified operation was completed.
+      iii.	Rejected: This state indicates that the operation did not complete. In this case an error value will be thrown.
+
+3. ### What is promise.all
+
+   Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets resolved when all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all method is below,
+   
+      ```
+         Promise.all([Promise1, Promise2, Promise3]) 
+            .then(result) => {   console.log(result) }
+            .catch(error => console.log(`Error in promises ${error}`))
+
+      ```
+
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###
    **[⬆ Back to Top](#table-of-contents)**

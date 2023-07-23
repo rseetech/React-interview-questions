@@ -153,7 +153,7 @@
 
 
    ![Alt text](image-6.png)
-   
+
 
    1. **Initialization:** In this phase, the developer has to define the props and initial state of the component this is generally done in the constructor of the component. 
 
@@ -262,18 +262,21 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
+
 9. ### Why we use JSX?
+
 
    It is faster than regular JavaScript because it performs optimization while translating the code to JavaScript.
 
    Instead of separating technologies by putting markup and logic in separate files, React uses components that contain both. t is type-safe, and most of the errors can be found at compilation time.
    It makes easier to create templates.
 
+
    **[⬆ Back to Top](#table-of-contents)**
 
 10. ### Why can't browsers read JSX?
 
-   Browsers cannot read JSX directly because they can only understand JavaScript objects, and JSX is not a regular JavaScript object. Thus, we need to transform the JSX file into a JavaScript object using transpilers like Babel and then pass it to the browser.
+      Browsers cannot read JSX directly because they can only understand JavaScript objects, and JSX is not a regular JavaScript object. Thus, we need to transform the JSX file into a JavaScript object using transpilers like Babel and then pass it to the browser.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -286,30 +289,42 @@
 13. ### How Virtual DOM works?
 
    The Virtual DOM works in three simple steps.
+
       i.	Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+
       ![Alt text](image.png)
+
       ii.	Then the difference between the previous DOM representation and the new one is calculated.
+
       ![Alt text](image-2.png)
+
       iii.	Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+
       ![Alt text](image-3.png)
+      
 
    **[⬆ Back to Top](#table-of-contents)**
+
    
 14. ### What is the difference between Real DOM and Virtual DOM?
 
+
    Below are the main differences between Real DOM and Virtual DOM,
 
-   | Real DOM                                     | Virtual DOM                                     |
-   | -------------------------------------------- | ----------------------------------------------- |
-   | Updates are slow                             | Updates are fast                                |
-   | DOM manipulation is very expensive.          | DOM manipulation is very easy                   |
-   | You can update HTML directly.                | You Can’t directly update HTML                  |
-   | It causes too much of memory wastage         | There is no memory wastage                      |
-   | Creates a new DOM if element updates         | It updates the JSX if element update            |
+      | Real DOM                                     | Virtual DOM                                     |
+      | -------------------------------------------- | ----------------------------------------------- |
+      | Updates are slow                             | Updates are fast                                |
+      | DOM manipulation is very expensive.          | DOM manipulation is very easy                   |
+      | You can update HTML directly.                | You Can’t directly update HTML                  |
+      | It causes too much of memory wastage         | There is no memory wastage                      |
+      | Creates a new DOM if element updates         | It updates the JSX if element update            |
+
 
    **[⬆ Back to Top](#table-of-contents)**
 
+
 15. ### What is the difference between Shadow DOM and Virtual DOM?
+
    The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The Virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -527,27 +542,30 @@
    **[⬆ Back to Top](#table-of-contents)**
 
 29. ### Why fragments are better than container divs?
+
    Below are the list of reasons,
 
       1.	Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
+
       2.	Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
+
       3.	The DOM Inspector is less cluttered.
 
    **[⬆ Back to Top](#table-of-contents)**
 
 30. ### What is React Router?
 
-   React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+      React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
 
-   **[⬆ Back to Top](#table-of-contents)**
+      **[⬆ Back to Top](#table-of-contents)**
 
 31. ### What are the <Router> components of React Router v4?
 
    React Router v4 provides below 3 <Router> components:
 
-   1.	<BrowserRouter>
-   2.	<HashRouter>
-   3.	<MemoryRouter>
+   1.	 `<BrowserRouter>`
+   2.	 `<HashRouter>`
+   3.	`<MemoryRouter>`
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -567,22 +585,22 @@
 
 33. ### How to perform automatic redirect after login?
 
-   The react-router package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
+      The react-router package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
 
-   ```
-      import React, { Component } from 'react'
-      import { Redirect } from 'react-router'
+      ```
+         import React, { Component } from 'react'
+         import { Redirect } from 'react-router'
 
-      export default class LoginComponent extends Component {
-         render() {
-            if (this.state.isLoggedIn === true) {
-               return <Redirect to="/your/redirect/page" />
-            } else {
-               return <div>{'Login Please'}</div>
+         export default class LoginComponent extends Component {
+            render() {
+               if (this.state.isLoggedIn === true) {
+                  return <Redirect to="/your/redirect/page" />
+               } else {
+                  return <div>{'Login Please'}</div>
+               }
             }
          }
-      }
-   ```
+      ```
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -606,24 +624,24 @@
 
 2. ### React Hook Types
 
-   1.	useState Hook
-   useState to Create State Variables
+   1.	**useState Hook:**
+      useState to Create State Variables
       Update State Variables
-   1.	useReducer Hook
-   useReducer is (Another) Powerful State Management Tool
-   Reducers are simple, predictable (pure) functions that take a previous state object and an action object and return a new state object.
-   2.	useEffect Hook
-   useEffect to Perform Side Effects
-   Side effects are when we need to reach into the outside world. Such as fetching data from an API or working with the DOM.
-   3.	useRef Hook
-   useRef to Reference React Elements
-   4.	useCallback Hook
+   2.	**useReducer Hook:**
+      useReducer is (Another) Powerful State Management Tool
+      Reducers are simple, predictable (pure) functions that take a previous state object and an action object and return a new state object.
+   3.	**useEffect Hook:**
+      useEffect to Perform Side Effects
+      Side effects are when we need to reach into the outside world. Such as fetching data from an API or working with the DOM.
+   4.	**useRef Hook:**
+      useRef to Reference React Elements
+   5.	**useCallback Hook:**
    useCallback Prevents Callbacks from Being Recreated
    Callback functions are the name of functions that are "called back" within a parent component.
-   5.	useMemo Hook
+   6.	**useMemo Hook:**
    useMemo Can Improve Expensive Operations
    useMemo allows us to memoize, or remember the result of expensive operations when they have already been made for certain inputs.
-   6.	useContext Hook
+   7.	**useContext Hook:**
    useContext Helps Us Avoid Prop Drilling
    In some cases, it is fine to pass props through multiple components, but it is redundant to pass props through components which do not need it.
 
@@ -732,13 +750,13 @@
 
 3. ### Why Use Redux?
 
-   #### for making data consist.
+   #### For making data consist.
 
    Well, an application has its state, which can be a combination of the states of its internal components.
 
    Let's take an e-commerce website for example. An e-commerce website will have several components like the cart component, user profile component, previously viewed section component, and so on.
 
-   We'll take the cart component which displays the number of items in a user's cart. The state of the cart component will `**consist**` of all the items the user has added to the cart and the total number of those items. At all times the application is up and running, this component has to show the updated number of items in the user's cart.
+   We'll take the cart component which displays the number of items in a user's cart. The state of the cart component will `consist` of all the items the user has added to the cart and the total number of those items. At all times the application is up and running, this component has to show the updated number of items in the user's cart.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -750,15 +768,16 @@
    **[⬆ Back to Top](#table-of-contents)**
 
 2. ### List down the components of Redux.
+
    Redux is composed of the following components:
 
-      i.	Action – It’s an object that describes what happened.
+      i.	**Action** – It’s an object that describes what happened.
 
-      ii.	Reducer –  It is a place to determine how the state will change.
+      ii. **Reducer** –  It is a place to determine how the state will change.
 
-      iii.	Store – State/ Object tree of the entire application is saved in the Store.
+      iii. **Store** – State/ Object tree of the entire application is saved in the Store.
 
-      iv.	View – Simply displays the data provided by the Store.
+      iv. **View** – Simply displays the data provided by the Store.
 
 
       ![Alt text](image-5.png)
@@ -799,17 +818,17 @@
 
    In a React application, data persistence can be handled using a variety of methods, including:
 
-      1.	Local storage: This allows you to store key-value pairs in the browser’s local storage, which can be retrieved even after the user closes the browser or restarts their device.
+      1.	**Local storage:** This allows you to store key-value pairs in the browser’s local storage, which can be retrieved even after the user closes the browser or restarts their device.
 
-      2.	Cookies: Cookies are small pieces of data that are stored in the user’s browser and can be accessed by the website on subsequent visits.
+      2.	**Cookies:** Cookies are small pieces of data that are stored in the user’s browser and can be accessed by the website on subsequent visits.
 
-      3.	IndexedDB: It’s a low-level API for client-side storage of large amounts of structured data, including files/blobs.
+      3.	**IndexedDB:** It’s a low-level API for client-side storage of large amounts of structured data, including files/blobs.
 
-      4.	Web SQL Database: This is a deprecated technology for storing data in a client-side database using SQL.
+      4.	**Web SQL Database:** This is a deprecated technology for storing data in a client-side database using SQL.
 
-      5.	Server-side storage: You can also store data on a remote server using an API or a database such as MySQL, MongoDB, etc.
+      5.	**Server-side storage:** You can also store data on a remote server using an API or a database such as MySQL, MongoDB, etc.
 
-      6.	Redux or Mobx: State management libraries like Redux or Mobx can be used to manage and persist application state across different components and sessions.
+      6.	**Redux or Mobx:** State management libraries like Redux or Mobx can be used to manage and persist application state across different components and sessions.
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -854,25 +873,25 @@
 
 2. ### How do you handle performance optimization in a React application?
 
-   •	Using the React.memo method for functional components
-   •	Using React’s Context API instead of props drilling.
-   •	Using the useEffect hook to handle side effects in functional components.
-   •	Using the useCallback and useMemo hooks to prevent unnecessary re-renders and improve performance.
-   •	Lazy loading of components and code splitting.
-   •	Minimizing the number of DOM updates by using the key prop when rendering a list of items.
-   •	Using the useReducer hook to manage state updates instead of useState
-   •	Using a virtualized list library like react-virtualized, react-window etc.
-   •	It’s always a good idea to test performance with real-world use cases and user interactions before and after making any optimization.
-   •	Lazy loading: Lazy loading is a technique where you only load the components that are needed for the current view. This can greatly improve the performance of your application.
-   •	Code splitting: Code splitting is a technique where you split your application into smaller chunks of code that are loaded on demand. This can greatly improve the performance of your application.
-   •	Optimize the loading time of your application by using techniques like code minification, compression, and caching.
-   •	Code splitting:
-   •	Lazy loading
-   •	Use of a bundler such as Webpack
-   •	Use of caching
-   •	Use of efficient algorithms and data structures
-   •	Regular performance monitoring and profiling
-   •	Use of optimization techniques such as memorization
+   1. Using the React.memo method for functional components
+   2. Using React’s Context API instead of props drilling.
+   3. Using the useEffect hook to handle side effects in functional components.
+   4. Using the useCallback and useMemo hooks to prevent unnecessary re-renders and improve performance.
+   5. Lazy loading of components and code splitting.
+   6. Minimizing the number of DOM updates by using the key prop when rendering a list of items.
+   7. Using the useReducer hook to manage state updates instead of useState
+   8. Using a virtualized list library like react-virtualized, react-window etc.
+   9. It’s always a good idea to test performance with real-world use cases and user interactions before and after making any optimization.
+   10. **Lazy loading:** Lazy loading is a technique where you only load the components that are needed for the current view. This can greatly improve the performance of your application.
+   11. **Code splitting:** Code splitting is a technique where you split your application into smaller chunks of code that are loaded on demand. This can greatly improve the performance of your application.
+   12. Optimize the loading time of your application by using techniques like code minification, compression, and caching.
+   13. Code splitting:
+   14. Lazy loading
+   15. Use of a bundler such as Webpack
+   16. Use of caching
+   17. Use of efficient algorithms and data structures
+   18. Regular performance monitoring and profiling
+   19. Use of optimization techniques such as memorization
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -880,11 +899,12 @@
 2. ### How do you handle data validation in a React application?
 
    Data validation in a React application can be handled in a variety of ways, including:
-   1.	PropTypes: React provides a built-in library called PropTypes that allows you to specify the expected data types for your component’s props. PropTypes will validate the props passed to your component at runtime, and will log warnings in the browser console if any props are of the wrong type.
 
-   2.	Custom validation functions: You can write custom validation functions to check the validity of your data. These functions can be called inside your component, and can be used to set error messages or update the state to indicate invalid data.
+   1.	**PropTypes:** React provides a built-in library called PropTypes that allows you to specify the expected data types for your component’s props. PropTypes will validate the props passed to your component at runtime, and will log warnings in the browser console if any props are of the wrong type.
 
-   3.	Third-party libraries: There are several third-party libraries available for data validation in React, such as yup, joi, or zod. These libraries provide a more powerful and flexible way to validate data, and often provide a more user-friendly way to report errors.
+   2.	**Custom validation functions:** You can write custom validation functions to check the validity of your data. These functions can be called inside your component, and can be used to set error messages or update the state to indicate invalid data.
+
+   3.	**Third-party libraries:** There are several third-party libraries available for data validation in React, such as yup, joi, or zod. These libraries provide a more powerful and flexible way to validate data, and often provide a more user-friendly way to report errors.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -892,19 +912,19 @@
 
    Handling security in a React application involves multiple steps, including:
    
-   Input validation: Validate all user inputs on the client and server side to prevent any malicious data from being processed.
+   1. **Input validation:** Validate all user inputs on the client and server side to prevent any malicious data from being processed.
 
-   Authenticating and authorizing users: Use a secure authentication mechanism such as JSON Web Tokens (JWT) to ensure that only authorized users can access sensitive data.
+   2. **Authenticating and authorizing users:** Use a secure authentication mechanism such as JSON Web Tokens (JWT) to ensure that only authorized users can access sensitive data.
 
-   Storing sensitive data securely: Do not store sensitive information such as passwords and credit card numbers in local storage, use encrypted storage instead.
+   3. **Storing sensitive data securely:** Do not store sensitive information such as passwords and credit card numbers in local storage, use encrypted storage instead.
 
-   Implementing HTTPS: Use HTTPS to ensure secure communication between the client and server and protect against network attacks such as man-in-the-middle attacks.
+   4. **Implementing HTTPS:** Use HTTPS to ensure secure communication between the client and server and protect against network attacks such as man-in-the-middle attacks.
 
-   Keeping dependencies up-to-date: Regularly update React and its dependencies to patch any known security vulnerabilities.
+   5. Keeping dependencies up-to-date:** Regularly update React and its dependencies to patch any known security vulnerabilities.
 
-   Using Content Security Policy (CSP): Implement a Content Security Policy (CSP) to restrict the types of resources that can be loaded in a React application and prevent cross-site scripting (XSS) attacks.
+   6. **Using Content Security Policy (CSP):** Implement a Content Security Policy (CSP) to restrict the types of resources that can be loaded in a React application and prevent cross-site scripting (XSS) attacks.
 
-   Regular security audits: Conduct regular security audits to identify and address potential security issues in a timely manner.
+   7. **Regular security audits:** Conduct regular security audits to identify and address potential security issues in a timely manner.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -941,9 +961,9 @@
 
    Promises have three states:
 
-      i.	Pending: This is an initial state of the Promise before an operation begins
-      ii.	Fulfilled: This state indicates that the specified operation was completed.
-      iii.	Rejected: This state indicates that the operation did not complete. In this case an error value will be thrown.
+      i.	**Pending:** This is an initial state of the Promise before an operation begins
+      ii. **Fulfilled:** This state indicates that the specified operation was completed.
+      iii. **Rejected:** This state indicates that the operation did not complete. In this case an error value will be thrown.
 
 3. ### What is promise.all
 
@@ -956,59 +976,4 @@
 
       ```
 
-
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
-   **[⬆ Back to Top](#table-of-contents)**
-
-2. ###
    **[⬆ Back to Top](#table-of-contents)**

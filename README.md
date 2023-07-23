@@ -290,12 +290,12 @@
 
    The Virtual DOM works in three simple steps.
 
-      i.	Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
-      ![Alt text](image.png)
-      ii.	Then the difference between the previous DOM representation and the new one is calculated.
-      ![Alt text](image-2.png)
-      iii.	Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
-      ![Alt text](image-3.png)
+   i.	Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+   ![Alt text](image.png)
+   ii.	Then the difference between the previous DOM representation and the new one is calculated.
+   ![Alt text](image-2.png)
+   iii.	Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+   ![Alt text](image-3.png)
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -352,7 +352,6 @@
 18. ### How can you embed two or more components into one?
    We can embed components into one in the following way:
 
-      ```
       class MyComponent extends React.Component {
          render(){
             return(              
@@ -363,9 +362,7 @@
             );
          }
       }
-      ```
-
-      ```
+      
       class Header extends React.Component {
          render(){
             return
@@ -375,7 +372,6 @@
       ReactDOM.render(
          <MyComponent/>, document.getElementById('content')
       );
-      ```
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -390,7 +386,6 @@
 
    State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
 
-      ```
       class User extends React.Component {
          constructor(props) {
             super(props)
@@ -407,7 +402,6 @@
             )
          }
       }
-      ```
 
    ![Alt text](image-1.png)
 
@@ -422,18 +416,18 @@
 22. ### Why should we not update the state directly?
    If you try to update state directly then it won't re-render the component.
 
-   **//Wrong**
-      ```
-      this.state.message = 'Hello world'
-      ```
+   **Wrong**
+   >  
+   >   this.state.message = 'Hello world'
+   >
+
    Instead use setState() method. 
    It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
 
-   **//Correct**
-
-      ```
-      this.setState({ message: 'Hello World' })
-      ```
+   **Correct**
+   >
+   >   this.setState({ message: 'Hello World' })
+   >   
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -444,7 +438,8 @@
 
 24. ### What is the use of refs?
    The ref is used to return a reference to the element. They should be avoided in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
-      ```
+      
+   
       class MyComponent extends React.Component {
          constructor(props) {
             super(props)
@@ -454,7 +449,6 @@
             return <div ref={this.myRef} />
          }
       }
-      ```
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -463,14 +457,15 @@
    A higher-order component ***(HOC)*** is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
 
    We call them pure components because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
-   const EnhancedComponent = higherOrderComponent(WrappedComponent)
+   
+   >  const EnhancedComponent = higherOrderComponent(WrappedComponent)
 
       HOC can be used for many use cases:
 
-      1.	 Code reuse, logic and bootstrap abstraction.
-      2. Render hijacking.
-      3. State abstraction and manipulation.
-      4. Props manipulation.
+         1.	Code reuse, logic and bootstrap abstraction.
+         2. Render hijacking.
+         3. State abstraction and manipulation.
+         4. Props manipulation.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -478,9 +473,8 @@
    Context provides a way to pass data through the component tree without having to pass props down manually at every level.
    For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
 
-      ```
-      const {Provider, Consumer} = React.createContext(defaultValue)
-      ```
+   >   const {Provider, Consumer} = React.createContext(defaultValue)
+
 
    **[⬆ Back to Top](#table-of-contents)**
 

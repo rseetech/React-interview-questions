@@ -18,7 +18,7 @@
 | 7   | [What are Components in ReactJS? ](#what-are-components-in-reactjs)                   |
 | 8   | [ReactJS-Lifecycle of Components ](#Rreactjs-lifecycle-of-components)                   |
 | 9   | [Why we use JSX ](#why-we-use-jsx)                   |
-| 10  | [Why can't browsers read JSX? ](#why-can't-browsers-read-jsx)                  |
+| 10  | [Why can't browsers read JSX? ](#why-cant-browsers-read-jsx)                  |
 | 11  | [What do you understand by Virtual DOM? ](#what-do-you-understand-by-virtual-dom)         |
 | 12  | [How Virtual DOM works? ](#how-virtual-dom-works)             |
 | 13  | [What is the difference between Real DOM and Virtual DOM? ](#what-is-the-difference-between-real-dom-and-virtual-dom)  |
@@ -38,7 +38,7 @@
 | 27  | [What are fragments? ](#what-are-fragments)       |
 | 28  | [Why fragments are better than container divs? ](#why-fragments-are-better-than-container-divs) |
 | 29  | [What is React Router? ](#what-is-react-router)                  |
-| 30  | [What are the components of React Router v4? ](#what-are-the-components-of-react-router-v4)                  |
+| 30  | [What are the components of React Router v4? ](#what-are-the-router-components-of-react-router-v4)   |
 | 31  | [How to implement default or NotFound page? ](#how-to-implement-default-or-notfound-page)                  |
 | 32  | [How to perform automatic redirect after login? ](#how-to-perform-automatic-redirect-after-login)                  |
 | 33  | [What Are React Hooks? ](#what-are-react-hooks)                  |
@@ -326,7 +326,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-10. ### Why can't browsers read JSX?
+10. ### Why cant browsers read JSX?
 
       Browsers cannot read JSX directly because they can only understand JavaScript objects, and JSX is not a regular JavaScript object. Thus, we need to transform the JSX file into a JavaScript object using transpilers like Babel and then pass it to the browser.
 
@@ -338,7 +338,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-13. ### How Virtual DOM works?
+12. ### How Virtual DOM works?
 
    The Virtual DOM works in three simple steps.
 
@@ -357,7 +357,7 @@
    **[⬆ Back to Top](#table-of-contents)**
 
    
-14. ### What is the difference between Real DOM and Virtual DOM?
+13. ### What is the difference between Real DOM and Virtual DOM?
    Below are the main differences between Real DOM and Virtual DOM,
 
    | Real DOM                                     | Virtual DOM                                     |
@@ -372,13 +372,13 @@
    **[⬆ Back to Top](#table-of-contents)**
 
 
-15. ### What is the difference between Shadow DOM and Virtual DOM?
+14. ### What is the difference between Shadow DOM and Virtual DOM?
 
    The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The Virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-16. ### How different is Reacts ES6 syntax when compared to ES5?
+15. ### How different is Reacts ES6 syntax when compared to ES5?
 
    Syntax has changed from ES5 to ES6 in the following aspects:
 
@@ -400,13 +400,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-17. ### What is the purpose of render in React.
+16. ### What is the purpose of render in React.
 
    Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as `<form>`, `<group>`,`<div>` etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-18. ### How can you embed two or more components into one?
+17. ### How can you embed two or more components into one?
    We can embed components into one in the following way:
 
       class MyComponent extends React.Component {
@@ -432,14 +432,14 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-19. ### What is Props?
+18. ### What is Props?
 
    Props is the shorthand for Properties in React. They are read-only components which must be kept pure 
    i.e. immutable. They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-20. ### What is state in React?
+19. ### What is state in React?
 
    State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
 
@@ -464,13 +464,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-21. ### What is the difference between state and props?
+20. ### What is the difference between state and props?
 
    Both props and state are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-22. ### Why should we not update the state directly?
+21. ### Why should we not update the state directly?
    If you try to update state directly then it won't re-render the component.
 
    **Wrong**
@@ -488,12 +488,12 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-23. ### What are synthetic events in React?
+22. ### What are synthetic events in React?
    SyntheticEvent is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including **stopPropagation()** and **preventDefault()**, except the events work identically across all browsers.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-24. ### What is the use of refs?
+23. ### What is the use of refs?
    The ref is used to return a reference to the element. They should be avoided in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
       
    
@@ -509,7 +509,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-25. ### What are Higher-Order Components?
+24. ### What are Higher-Order Components?
 
    A higher-order component ***(HOC)*** is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
 
@@ -526,7 +526,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-26. ### What is context?
+25. ### What is context?
    Context provides a way to pass data through the component tree without having to pass props down manually at every level.
    For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
 
@@ -535,7 +535,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-27. ### How to write comments in React?
+26. ### How to write comments in React?
    The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
 
    **Single-line comments:**
@@ -553,7 +553,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-28. ### What are fragments?
+27. ### What are fragments?
    It's common pattern in React which is used for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
 
       render() {
@@ -581,7 +581,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-29. ### Why fragments are better than container divs?
+28. ### Why fragments are better than container divs?
 
    Below are the list of reasons,
 
@@ -593,13 +593,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-30. ### What is React Router?
+29. ### What is React Router?
 
       React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
 
       **[⬆ Back to Top](#table-of-contents)**
 
-31. ### What are the <Router> components of React Router v4?
+30. ### What are the Router components of React Router v4?
 
    React Router v4 provides below 3 <Router> components:
 
@@ -609,7 +609,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-32. ### How to implement default or NotFound page?
+31. ### How to implement default or NotFound page?
 
    A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
 
@@ -623,7 +623,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-33. ### How to perform automatic redirect after login?
+32. ### How to perform automatic redirect after login?
 
       The react-router package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
 
@@ -644,13 +644,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### What Are React Hooks?
+33. ### What Are React Hooks?
 
    React Hooks are a feature in React that allows developers to use state and other React features without writing a class component. Hooks are functions that let developers "hook into" the React state and lifecycle methods from a functional component.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### What are the benefits of using React Hooks?
+34. ### What are the benefits of using React Hooks?
 
    Some benefits of using React Hooks are:
 
@@ -662,7 +662,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### React Hook Types
+35. ### React Hook Types
 
    1.	**useState Hook:**
       useState to Create State Variables
@@ -688,7 +688,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-3. ### Working example of useReducer hook.
+36. ### Working example of useReducer hook.
 
    ```
       function reducer(state, dispatch) {
@@ -719,7 +719,7 @@
    
    **[⬆ Back to Top](#table-of-contents)**
 
-3. ### How is useMemo different from useCallback?
+37. ### How is useMemo different from useCallback?
 
    The main difference between useMemo and useCallback hook is, useMemo returns memoized value and useCallback returns memoised function.
 
@@ -775,12 +775,12 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### Use Custom Hooks For Sharing Application Logic
+38. ### Use Custom Hooks For Sharing Application Logic
    You can extract your component’s logic into reusable functions as custom hooks with the release of React Hooks. You will find that some of the application logic will be used on several components repeatedly.
       
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### What Is React Redux and How Do You Use it?
+39. ### What Is React Redux and How Do You Use it?
 
    A predictable state container for JavaScript applications and Redux is an open-source JavaScript library used to manage application state.
 
@@ -788,7 +788,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-3. ### Why Use Redux?
+40. ### Why Use Redux?
 
    #### For making data consist.
 
@@ -800,14 +800,14 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### Show how the data flows through Redux?
+41. ### Show how the data flows through Redux?
 
    ![Alt text](image-4.png)
 
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### List down the components of Redux.
+42. ### List down the components of Redux.
 
    Redux is composed of the following components:
 
@@ -825,7 +825,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### Redux-Saga
+43. ### Redux-Saga
 
    An intuitive Redux side effect manager.
 
@@ -833,7 +833,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-3. ### What are the differences between call() and put() in redux-saga?
+44. ### What are the differences between call() and put() in redux-saga?
 
    Both `call()` and `put()` are effect creator functions. call() function is used to create effect description, which instructs middleware to call the promise. put() function creates an effect, which instructs middleware to dispatch an action to the store.
    
@@ -856,7 +856,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### How do you handle data persistence in a React application?
+45. ### How do you handle data persistence in a React application?
 
    In a React application, data persistence can be handled using a variety of methods, including:
 
@@ -875,13 +875,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### react-error-boundary
+46. ### react-error-boundary
 
    Simple reusable React error boundary component
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### Why you should use Error Boundaries in React
+47. ### Why you should use Error Boundaries in React
 
    React Error Boundaries were introduced in React version 16 to generate a fallback UI in case a component were to crash. This was to ensure that a JavaScript error in a single component should not crash the whole app.
 
@@ -914,7 +914,7 @@
       ```
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### How do you handle performance optimization in a React application?
+48. ### How do you handle performance optimization in a React application?
 
    1. Using the React.memo method for functional components
    2. Using React’s Context API instead of props drilling.
@@ -939,7 +939,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### How do you handle data validation in a React application?
+49. ### How do you handle data validation in a React application?
 
    Data validation in a React application can be handled in a variety of ways, including:
 
@@ -951,7 +951,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### How do you handle security in a React application?
+50. ### How do you handle security in a React application?
 
    Handling security in a React application involves multiple steps, including:
    
@@ -971,7 +971,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-2. ### What is a promise
+51. ### What is a promise
    A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). 
    
    It will be in one of the 3 possible states: **fulfilled, rejected, or pending.**
@@ -998,13 +998,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
    
-2. ### Why do you need a promise
+52. ### Why do you need a promise
 
    Promises are used to handle asynchronous operations. They provide an alternative approach for callbacks by reducing the callback hell and writing the cleaner code.
 
    **[⬆ Back to Top](#table-of-contents)**
    
-3. ### What are the three states of promise
+53. ### What are the three states of promise
 
    Promises have three states:
 
@@ -1014,7 +1014,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-3. ### What is promise all
+54. ### What is promise all
 
    Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets resolved when all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all method is below,
    
@@ -1026,3 +1026,101 @@
       ```
 
    **[⬆ Back to Top](#table-of-contents)**
+
+55. ### Event bubbling
+
+   The bubbling principle is simple.
+
+   When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+
+   Let’s say we have 3 nested elements FORM > DIV > P with a handler on each of them:
+
+   ```
+   <style>
+   body * {
+      margin: 10px;
+      border: 1px solid blue;
+   }
+   </style>
+
+   <form onclick="alert('form')">FORM  // first 
+      <div onclick="alert('div')">DIV  // Second
+         <p onclick="alert('p')">P</p> // Third
+      </div>
+   </form>
+
+   ```
+
+   ![Alt text](bubbling.jpg)
+
+   ![Alt text](image-7.png)
+
+
+   The Event bubbling in JavaScript is a type of event propagation. The event triggers the innermost target element and consecutively triggers the parent element of the target element in the same hierarchy until it triggers the outermost element.
+
+   It is a procedure where it starts from the element that triggered the event and then bubbles up to the ancestor elements in the hierarchy.   
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+56. ### How to Stop Event Bubbling
+   
+   Event Bubbling is a default behavior for events. But in some cases, you might want to prevent this.
+
+   Let's say, for example, from our HTML code, that you want the div to open a modal when it is clicked. For the button, on the other hand, you want it to make an API request when it is clicked.
+
+   In this case, you may not want the modal to open when you click the button. You might want the modal to only open when you actually click it (and not when you click any of its children). This is where preventing event propagation comes in.
+
+   To prevent event bubbling, you use the `stopPropagation` method of the event object.
+
+   ```
+      button.addEventListener("click", (event) => {
+         // do anything with the event object
+      }
+
+      body.addEventListener('click', () => {
+         console.log("body was clicked")
+      })
+
+      div.addEventListener('click', () => {
+         console.log("div was clicked")
+      })
+
+      span.addEventListener('click', () => {
+         console.log("span was clicked")
+      })
+
+      button.addEventListener('click', (event) => {
+         event.stopPropagation()
+         console.log("button was clicked")
+      })
+
+   ```
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+57. ### Event Capturing
+
+    **Event Capturing is opposite to event bubbling,** where in event capturing, an event moves from the outermost element to the target. Otherwise, in case of event bubbling, the event movement begins from the target to the outermost element in the file. Event Capturing is performed before event bubbling but capturing is used very rarely because event bubbling is sufficient to handle the event flow.
+
+   ```
+      <form onclick="alert('form')">FORM  // Third
+         <div onclick="alert('div')">DIV  // Second
+            <p onclick="alert('p')">P</p> // first
+         </div>
+      </form>
+
+   ```
+
+   There’s another phase of event processing called `“capturing”`. It is rarely used in real code, but sometimes can be useful.
+
+   The standard DOM Events describes 3 phases of event propagation:
+
+   **Capturing phase** – the event goes down to the element.
+
+   **Target phase** – the event reached the target element.
+
+   **Bubbling phase** – the event bubbles up from the element.
+
+   Here’s the picture, taken from the specification, of the capturing (1), target (2) and bubbling (3) phases for a click event on a <td> inside a table: 
+
+   **[⬆ Back to Top](#table-of-contents)**s

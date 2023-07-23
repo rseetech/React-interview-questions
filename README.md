@@ -12,9 +12,9 @@
 | 1   | [Introduction to React](#introduction-to-react)           |
 | 2   | [What is React?](#what-is-react?)                         |
 | 3   | [Features of React](#features-of-react)                   |
-| 4   | [What are the major features of React](#What-are-the-major-features-of-React)                   |
-| 5   | [Advantages of ReactJS](#Advantages-of-ReactJS)                   |
-| 6   | [Disadvantages of ReactJS ](#Disadvantages-of-ReactJS)                   |
+| 4   | [What are the major features of React](#what-are-the-major-features-of-react)                   |
+| 5   | [Advantages of ReactJS](#advantages-of-reactJS)                   |
+| 6   | [Disadvantages of ReactJS ](#disadvantages-of-reactJS)                   |
 | 7   | [What are Components in ReactJS? ](#What are Components in ReactJS?)                   |
 | 8   | [ReactJS | Lifecycle of Components ](#ReactJS | Lifecycle of Components)                   |
 | 9   | [Why we use JSX ](#Why we use JSX)                   |

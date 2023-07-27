@@ -684,6 +684,8 @@
 
 35. ### React Hook Types
 
+   #### List of Hooks below:
+   
    1.	**useState Hook:**
       useState to Create State Variables
       Update State Variables
@@ -1145,3 +1147,6 @@
    Here’s the picture, taken from the specification, of the capturing (1), target (2) and bubbling (3) phases for a click event on a <td> inside a table: 
 
    **[⬆ Back to Top](#table-of-contents)**
+
+3. ### What Is Server Side Rendering?
+Server Side Rendering (SSR) is used to render web pages on the server before sending them to the client. This allows for faster page loads, improved performance, and an SEO-friendly rendering solution for React applications. In addition, SSR can provide a better experience for users with slower internet connections or devices with limited memory and processing power by performing the initial rendering of components on the server.

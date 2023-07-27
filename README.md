@@ -938,6 +938,7 @@
 
 48. ### How do you handle performance optimization in a React application?
 
+   List of optimization:
 
    1. Using the React.memo method for functional components
 

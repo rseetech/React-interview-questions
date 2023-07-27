@@ -685,7 +685,7 @@
 35. ### React Hook Types
 
    #### List of Hooks below:
-   
+
    1.	**useState Hook:**
       useState to Create State Variables
       Update State Variables
@@ -833,16 +833,16 @@
 
    Redux is composed of the following components:
 
-      i.	**Action** – It’s an object that describes what happened.
+   i.	**Action** – It’s an object that describes what happened.
 
-      ii. **Reducer** –  It is a place to determine how the state will change.
+   ii. **Reducer** –  It is a place to determine how the state will change.
 
-      iii. **Store** – State/ Object tree of the entire application is saved in the Store.
+   iii. **Store** – State/ Object tree of the entire application is saved in the Store.
 
-      iv. **View** – Simply displays the data provided by the Store.
+   iv. **View** – Simply displays the data provided by the Store.
 
 
-      ![Alt text](image-5.png)
+   ![Alt text](image-5.png)
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -882,17 +882,17 @@
 
    In a React application, data persistence can be handled using a variety of methods, including:
 
-      1.	**Local storage:** This allows you to store key-value pairs in the browser’s local storage, which can be retrieved even after the user closes the browser or restarts their device.
+   1.	**Local storage:** This allows you to store key-value pairs in the browser’s local storage, which can be retrieved even after the user closes the browser or restarts their device.
 
-      2.	**Cookies:** Cookies are small pieces of data that are stored in the user’s browser and can be accessed by the website on subsequent visits.
+   2.	**Cookies:** Cookies are small pieces of data that are stored in the user’s browser and can be accessed by the website on subsequent visits.
 
-      3.	**IndexedDB:** It’s a low-level API for client-side storage of large amounts of structured data, including files/blobs.
+   3.	**IndexedDB:** It’s a low-level API for client-side storage of large amounts of structured data, including files/blobs.
 
-      4.	**Web SQL Database:** This is a deprecated technology for storing data in a client-side database using SQL.
+   4.	**Web SQL Database:** This is a deprecated technology for storing data in a client-side database using SQL.
 
-      5.	**Server-side storage:** You can also store data on a remote server using an API or a database such as MySQL, MongoDB, etc.
+   5.	**Server-side storage:** You can also store data on a remote server using an API or a database such as MySQL, MongoDB, etc.
 
-      6.	**Redux or Mobx:** State management libraries like Redux or Mobx can be used to manage and persist application state across different components and sessions.
+   6.	**Redux or Mobx:** State management libraries like Redux or Mobx can be used to manage and persist application state across different components and sessions.
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -938,18 +938,31 @@
 
 48. ### How do you handle performance optimization in a React application?
 
+
    1. Using the React.memo method for functional components
+
    2. Using React’s Context API instead of props drilling.
+
    3. Using the useEffect hook to handle side effects in functional components.
+
    4. Using the useCallback and useMemo hooks to prevent unnecessary re-renders and improve performance.
+
    5. Lazy loading of components and code splitting.
+
    6. Minimizing the number of DOM updates by using the key prop when rendering a list of items.
+
    7. Using the useReducer hook to manage state updates instead of useState
+
    8. Using a virtualized list library like react-virtualized, react-window etc.
+
    9. It’s always a good idea to test performance with real-world use cases and user interactions before and after making any optimization.
+
    10. **Lazy loading:** Lazy loading is a technique where you only load the components that are needed for the current view. This can greatly improve the performance of your application.
+
    11. **Code splitting:** Code splitting is a technique where you split your application into smaller chunks of code that are loaded on demand. This can greatly improve the performance of your application.
+
    12. Optimize the loading time of your application by using techniques like code minification, compression, and caching.
+
    13. Code splitting:
    14. Lazy loading
    15. Use of a bundler such as Webpack
@@ -957,7 +970,6 @@
    17. Use of efficient algorithms and data structures
    18. Regular performance monitoring and profiling
    19. Use of optimization techniques such as memorization
-
 
    **[⬆ Back to Top](#table-of-contents)**
 

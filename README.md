@@ -674,11 +674,15 @@
 
    Some benefits of using React Hooks are:
 
-   It allows for simpler and cleaner code.
-   Hooks make it easier to reuse stateful logic between components.
-   It allows developers to use state and other React features without writing a class component, which simplifies the component's structure.
-   It makes testing components easier because it is easier to test a function than a class.
-   It simplifies the management of component state and side effects.
+   1. It allows for simpler and cleaner code.
+
+   2. Hooks make it easier to reuse stateful logic between components.
+
+   3. It allows developers to use state and other React features without writing a class component, which simplifies the component's structure.
+
+   4. It makes testing components easier because it is easier to test a function than a class.
+
+   5. It simplifies the management of component state and side effects.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -861,8 +865,22 @@
    
    **call():** is a blocking effect, which means that the saga will wait for promise resolving before moving on to the next step.
    
-   **put() :**, on the other hand, is a non-blocking effect, which means that the saga can continue to the next step and action will be dispatched within internal scheduler.
+   **put() :** on the other hand, is a non-blocking effect, which means that the saga can continue to the next step and action will be dispatched within internal scheduler.
 
+   ### Generators
+
+   Regular functions return only one, single value (or nothing).
+
+   Generators can return `(“yield”)` multiple values, one after another, on-demand. They work great with iterables, allowing to create data streams with ease.
+
+   #### Generator functions
+
+   To create a generator, we need a special syntax construct: function*, so-called “generator function”.
+
+   ### yield
+
+   The yield operator is used to pause and resume a generator function.
+   
    ```
       function* mySaga() {
          // Dispatch an action to the store using put()

@@ -1179,5 +1179,26 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
+3. ### Closure in JavaScript
+
+   A closure is a feature of JavaScript that allows inner functions to access the outer scope of a function. Closure helps in binding a function to its outer boundary and is created automatically whenever a function is created. A block is also treated as a scope since ES6. Since JavaScript is event-driven so closures are useful as it helps to maintain the state between events.
+
+   ```
+      function init() {
+         var name = "Mozilla"; // name is a local variable created by init
+         function displayName() {
+            // displayName() is the inner function, that forms the closure
+            console.log(name); // use variable declared in the parent function
+         }
+         displayName();
+      }
+      init();
+      
+   ```
+   **[⬆ Back to Top](#table-of-contents)**
+
 3. ### What Is Server Side Rendering?
-Server Side Rendering (SSR) is used to render web pages on the server before sending them to the client. This allows for faster page loads, improved performance, and an SEO-friendly rendering solution for React applications. In addition, SSR can provide a better experience for users with slower internet connections or devices with limited memory and processing power by performing the initial rendering of components on the server.
+
+   Server Side Rendering (SSR) is used to render web pages on the server before sending them to the client. This allows for faster page loads, improved performance, and an SEO-friendly rendering solution for React applications. In addition, SSR can provide a better experience for users with slower internet connections or devices with limited memory and processing power by performing the initial rendering of components on the server.
+
+   **[⬆ Back to Top](#table-of-contents)**

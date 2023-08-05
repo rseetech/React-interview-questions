@@ -826,6 +826,18 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
+41. ### What are the core principles of Redux?
+
+   Redux follows three fundamental principles:
+
+   i.Single source of truth: The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
+
+   ii.State is read-only: The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
+
+   iii.Changes are made with pure functions: To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
 41. ### Show how the data flows through Redux?
 
    ![Alt text](image-4.png)

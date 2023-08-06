@@ -1041,3 +1041,13 @@
    Server Side Rendering (SSR) is used to render web pages on the server before sending them to the client. This allows for faster page loads, improved performance, and an SEO-friendly rendering solution for React applications. In addition, SSR can provide a better experience for users with slower internet connections or devices with limited memory and processing power by performing the initial rendering of components on the server.
 
    **[⬆ Back to Top](#table-of-contents)**
+
+52. ### Why is React Js called as Single Page Application
+
+   A single-page application is a web application that dynamically updates and renders content on a single HTML page, improving user experience by reducing page reloads. Instead of loading entire new pages from the server, SPAs request data and markup fragments to update the content, resulting in smoother transitions and faster load times.
+   
+   A Single Page Application is a web application or website that interacts with the web browser by dynamically rewriting the current web page with new data from the web server, instead of the default method of the browser loading entire new pages.
+
+   This means that the URL of your website will not change completely (page will not reload), instead it will keep getting content and rewriting the DOM with it instead of loading a new page.
+
+   **[⬆ Back to Top](#table-of-contents)**

@@ -815,13 +815,13 @@
 
 40. ### Why Use Redux?
 
-   #### For making data consist.
+      #### For making data consist.
 
-   Well, an application has its state, which can be a combination of the states of its internal components.
+      Well, an application has its state, which can be a combination of the states of its internal components.
 
-   Let's take an e-commerce website for example. An e-commerce website will have several components like the cart component, user profile component, previously viewed section component, and so on.
+      Let's take an e-commerce website for example. An e-commerce website will have several components like the cart component, user profile component, previously viewed section component, and so on.
 
-   We'll take the cart component which displays the number of items in a user's cart. The state of the cart component will `consist` of all the items the user has added to the cart and the total number of those items. At all times the application is up and running, this component has to show the updated number of items in the user's cart.
+      We'll take the cart component which displays the number of items in a user's cart. The state of the cart component will `consist` of all the items the user has added to the cart and the total number of those items. At all times the application is up and running, this component has to show the updated number of items in the user's cart.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -829,11 +829,11 @@
 
    Redux follows three fundamental principles:
 
-   i.Single source of truth: The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
+   1. **Single source of truth:** The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
 
-   ii.State is read-only: The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
+   2.**State is read-only:** The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
 
-   iii.Changes are made with pure functions: To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
+   3.**Changes are made with pure functions:** To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -886,7 +886,7 @@
 
    #### Generator functions
 
-   To create a generator, we need a special syntax construct: function*, so-called “generator function”.
+   To create a generator, we need a special syntax construct: function*, so-called `“generator function”`.
 
    ### yield
 
@@ -928,14 +928,9 @@
 
 47. ### Difference Between Local Storage, Session Storage, And Cookies
 
-| Local Storage                                     | Session Storage                           |  Cookies 
-    |
+| Local Storage              | Session Storage                  |  Cookies              |
    | ------------------------------ | ------------------------------- |---------------------------|
    | The storage capacity of local storage is 5MB/10MB | The storage capacity of session storage is 5MB  | The storage capacity of Cookies is 4KB |
-   | As it is not session-based, it must be deleted via javascript or manually| It’s session-based and works per window or tab. This means that data is stored only for the duration of a session, i.e., until the browser (or tab) is closed  | Cookies expire based on the setting and working per tab and window  |
-   | The client  can only read local storage| The client can only read local storage  | Both clients and servers can read and write the cookies |
-   | There is no transfer of data to the server| There is no transfer of data to the server  | Data transfer to the server is exist |
-   | There are fewer old browsers that support it| There are fewer old browsers that support it  | It is supported by all the browser including older browser |
 
    **[⬆ Back to Top](#table-of-contents)**
 

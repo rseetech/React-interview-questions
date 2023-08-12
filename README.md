@@ -27,8 +27,8 @@
 
 ### Table of Contents
 
-| No. | Questions                                                                              |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| No. | Questions                                                                                         |
+| --- | ------------------------------------------------------------------------------------------------- |
 | 1   | [Introduction to React](#introduction-to-react)           |
 | 2   | [What is React?](#what-is-react)                        |
 | 3   | [Features of React](#features-of-react)                   |
@@ -79,10 +79,6 @@
 | 48  | [How do you handle performance optimization in a React application? ](#how-do-you-handle-performance-optimization-in-a-react-application)       |
 | 49  | [How do you handle data validation in a React application? ](#how-do-you-handle-data-validation-in-a-react-application) |
 | 50  | [How do you handle security in a React application? ](#how-do-you-handle-security-in-a-react-application?)|
-| 51  | [What is a promise ](#what-is-a-promise)      |
-| 52  | [Why do you need a promise ](#why-do-you-need-a-promise)     |
-| 53  | [What are the three states of promise ](#what-are-the-three-states-of-promise)       |
-| 54  | [What is promise all ](#what-is-promise-all)     |
 
                               
 

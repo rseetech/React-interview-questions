@@ -190,9 +190,9 @@
    import ReactDOM from 'react-dom';
 
    class Hello extends React. Component {
-   render() {
-      return <h1>Hello, From RseeTech!</h1>;
-   }
+      render() {
+         return <h1>Hello, From RseeTech!</h1>;
+      }
    }
    export default Hello;
    ```
@@ -205,8 +205,7 @@
    import Hello from './test.jsx';
 
    ReactDOM.render(
-      <Hello />,
-      document.getElementById('root')
+      <Hello />, document.getElementById('root')
    );
    ```
 
@@ -615,9 +614,9 @@
 
 29. ### What is React Router?
 
-      React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+   React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
 
-      **[⬆ Back to Top](#table-of-contents)**
+   **[⬆ Back to Top](#table-of-contents)**
 
 30. ### What are the Router components of React Router v4?
 
@@ -633,13 +632,13 @@
 
    A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
 
-      ```
-         <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/user" component={User}/>
-            <Route component={NotFound} />
-         </Switch>
-      ```
+   ```
+      <Switch>
+         <Route exact path="/" component={Home}/>
+         <Route path="/user" component={User}/>
+         <Route component={NotFound} />
+      </Switch>
+   ```
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -751,43 +750,13 @@
 
    #### Understanding useMemo
 
-      ```
-         import { React, useState, useMemo } from 'react';
-         import ChildComponent from './ChildComponent'
+   ```
+      import { React, useState, useMemo } from 'react';
+      import ChildComponent from './ChildComponent'
 
-         function App() {
-            const [num, setNum] = useState(0);
-            const getChildComp = useMemo(() => <ChildComponent />, []);
-            return(
-               <div>
-                  <h1>{num}</h1>
-                  {getChildComp}
-                  <button onClick={() => setNum(num + 1)}> Addition </button>
-               </div>
-            );
-            }
-
-      ```
-
-   #### Understanding useCallback
-
-      ```
-
-         import { React, useState } from 'react';
-         import ChildComponent from './ChildComponent'
-
-         function App() {
+      function App() {
          const [num, setNum] = useState(0);
-
-         const handleUpdateNum = () => {
-            //some code
-         };
-
-         const getChildComp = useMemo(
-            () => <ChildComponent handleUpdateNum={handleUpdateNum} />,
-            [handleUpdateNum]
-         );
-
+         const getChildComp = useMemo(() => <ChildComponent />, []);
          return(
             <div>
                <h1>{num}</h1>
@@ -797,7 +766,37 @@
          );
          }
 
-      ```
+   ```
+
+   #### Understanding useCallback
+
+   ```
+
+      import { React, useState } from 'react';
+      import ChildComponent from './ChildComponent'
+
+      function App() {
+      const [num, setNum] = useState(0);
+
+      const handleUpdateNum = () => {
+         //some code
+      };
+
+      const getChildComp = useMemo(
+         () => <ChildComponent handleUpdateNum={handleUpdateNum} />,
+         [handleUpdateNum]
+      );
+
+      return(
+         <div>
+            <h1>{num}</h1>
+            {getChildComp}
+            <button onClick={() => setNum(num + 1)}> Addition </button>
+         </div>
+      );
+      }
+
+   ```
 
    **[⬆ Back to Top](#table-of-contents)**
 

@@ -950,31 +950,31 @@
 
    >  npm i react-error-boundary@3.0.2
 
-      ```
-         class ErrorBoundary extends React.Component {
-            state = {error: null};
-            render() {
-               if (!this.state.error) return this.props.children;
-               else return <h1>Error!</h1>;
-            }
-            static getDerivedStateFromError(error) {
-               return {error};
-            }
+   ```
+      class ErrorBoundary extends React.Component {
+         state = {error: null};
+         render() {
+            if (!this.state.error) return this.props.children;
+            else return <h1>Error!</h1>;
          }
-         
-         export const () => (
-            <App>
-               <ErrorBoundary>
-                     <Header>
-                     <ErrorBoundary>
-                        <Router />
-                     </ErrorBoundary>
-                     <Footer />
-               </ErrorBoundary>
-            </App>
-         );
+         static getDerivedStateFromError(error) {
+            return {error};
+         }
+      }
+      
+      export const () => (
+         <App>
+            <ErrorBoundary>
+                  <Header>
+                  <ErrorBoundary>
+                     <Router />
+                  </ErrorBoundary>
+                  <Footer />
+            </ErrorBoundary>
+         </App>
+      );
 
-      ```
+   ```
    **[⬆ Back to Top](#table-of-contents)**
 
 48. ### How do you handle performance optimization in a React application?
@@ -1005,8 +1005,6 @@
 
    12. Optimize the loading time of your application by using techniques like code minification, compression, and caching.
 
-   13. Code splitting:
-   14. Lazy loading
    15. Use of a bundler such as Webpack
    16. Use of caching
    17. Use of efficient algorithms and data structures
@@ -1039,7 +1037,7 @@
 
    4. **Implementing HTTPS:** Use HTTPS to ensure secure communication between the client and server and protect against network attacks such as man-in-the-middle attacks.
 
-   5. Keeping dependencies up-to-date:** Regularly update React and its dependencies to patch any known security vulnerabilities.
+   5. **Keeping dependencies up-to-date:** Regularly update React and its dependencies to patch any known security vulnerabilities.
 
    6. **Using Content Security Policy (CSP):** Implement a Content Security Policy (CSP) to restrict the types of resources that can be loaded in a React application and prevent cross-site scripting (XSS) attacks.
 

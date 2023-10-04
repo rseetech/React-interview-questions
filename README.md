@@ -1135,4 +1135,9 @@
 
    eslint-plugin-jsx-a11y    => .eslintrc
 
+   **Testing accessibility in the browser**
+
+   A number of tools exist that can run accessibility audits on web pages in your browser. Please use them in combination with other accessibility checks mentioned here as they can only test the technical accessibility of your HTML.
+
+
    **[⬆ Back to Top](#table-of-contents)**

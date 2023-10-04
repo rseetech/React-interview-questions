@@ -79,6 +79,7 @@
 | 48  | [How do you handle performance optimization in a React application? ](#how-do-you-handle-performance-optimization-in-a-react-application)       |
 | 49  | [How do you handle data validation in a React application? ](#how-do-you-handle-data-validation-in-a-react-application) |
 | 50  | [How do you handle security in a React application? ](#how-do-you-handle-security-in-a-react-application?)|
+| 51  | [Accessibility? ](#web-accessibility?)|
 
                               
 
@@ -1054,5 +1055,84 @@
    A Single Page Application is a web application or website that interacts with the web browser by dynamically rewriting the current web page with new data from the web server, instead of the default method of the browser loading entire new pages.
 
    This means that the URL of your website will not change completely (page will not reload), instead it will keep getting content and rewriting the DOM with it instead of loading a new page.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+
+53. ### web-accessibility
+
+   Web accessibility (also referred to as a11y) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.
+
+   React fully supports building accessible websites, often by using standard HTML techniques.
+
+   **Standards and Guidelines**
+
+   **WCAG**
+
+   The Web Content Accessibility Guidelines provides guidelines for creating accessible web sites.
+
+   The following WCAG checklists provide an overview:
+
+   WCAG checklist from Wuhcag
+   WCAG checklist from WebAIM
+   Checklist from The A11Y Project
+
+   **WAI-ARIA**
+
+   The Web Accessibility Initiative - Accessible Rich Internet Applications document contains techniques for building fully accessible JavaScript widgets.
+
+   Note that all aria-* HTML attributes are fully supported in JSX. Whereas most DOM properties and attributes in React are camelCased, these attributes should be hyphen-cased (also known as kebab-case, lisp-case, etc) as they are in plain HTML:
+
+   <input type="text" aria-label={labelText} aria-required="true" onChange={onchangeHandler} value={inputValue} name="name" />
+
+   **Semantic HTML**
+
+   Semantic HTML is the foundation of accessibility in a web application. Using the various HTML elements to reinforce the meaning of information in our websites will often give us accessibility for free.
+
+   MDN HTML elements reference
+   Sometimes we break HTML semantics when we add <div> elements to our JSX to make our React code work, especially when working with lists (<ol>, <ul> and <dl>) and the HTML <table>. In these cases we should rather use React Fragments to group together multiple elements.
+
+   **Accessible Forms**
+
+   **Labeling**
+
+   Every HTML form control, such as <input> and <textarea>, needs to be labeled accessibly. We need to provide descriptive labels that are also exposed to screen readers.
+
+   The following resources show us how to do this:
+
+   The W3C shows us how to label elements
+   WebAIM shows us how to label elements
+   The Paciello Group explains accessible names
+   Although these standard HTML practices can be directly used in React, note that the for attribute is written as htmlFor in JSX:
+
+   <label htmlFor="namedInput">Name:</label>
+   <input id="namedInput" type="text" name="name"/>
+
+   **Focus Control**
+
+   Ensure that your web application can be fully operated with the keyboard only:
+
+   **WebAIM talks about keyboard accessibility**
+
+   Keyboard focus and focus outline
+   Keyboard focus refers to the current element in the DOM that is selected to accept input from the keyboard. We see it everywhere as a focus outline similar to that shown in the following
+
+   **Mouse and pointer events**
+
+   Ensure that all functionality exposed through a mouse or pointer event can also be accessed using the keyboard alone. Depending only on the pointer device will lead to many cases where keyboard users cannot use your application.
+
+   **Color contrast**
+
+   Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision:
+
+   1. WCAG - Understanding the Color Contrast Requirement
+   2. Everything About Color Contrast And Why You Should Rethink It
+   3. A11yProject - What is Color Contrast
+
+   **Development and Testing Tools**
+
+   There are a number of tools we can use to assist in the creation of accessible web applications.
+
+   eslint-plugin-jsx-a11y    => .eslintrc
 
    **[⬆ Back to Top](#table-of-contents)**

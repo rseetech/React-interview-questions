@@ -79,7 +79,7 @@
 | 48  | [How do you handle performance optimization in a React application? ](#how-do-you-handle-performance-optimization-in-a-react-application)       |
 | 49  | [How do you handle data validation in a React application? ](#how-do-you-handle-data-validation-in-a-react-application) |
 | 50  | [How do you handle security in a React application? ](#how-do-you-handle-security-in-a-react-application?)|
-| 51  | [Accessibility? ](#web-accessibility?)|
+| 51  | [Web Accessibility? ](#web-accessibility?)|
 
                               
 
@@ -1059,7 +1059,7 @@
    **[⬆ Back to Top](#table-of-contents)**
 
 
-53. ### web-accessibility
+53. ### web-accessibility?
 
    Web accessibility (also referred to as a11y) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.
 

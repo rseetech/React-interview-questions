@@ -1061,7 +1061,7 @@
 
 53. ### web-accessibility
 
-   Web accessibility (also referred to as a11y) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.
+   Web accessibility `Web Content Accessibility Guidelines` (also referred to as a11y) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.
 
    React fully supports building accessible websites, often by using standard HTML techniques.
 

@@ -1058,6 +1058,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
+53. ### What is the purpose of accessibility testing
+
+   Accessibility testing is a sort of software testing that ensures that the programme under test is useable by persons with disabilities such as hearing loss, colour blindness, senior citizens, and other disadvantaged groups. Usability Testing is a subset of this.
 
 53. ### web-accessibility
 
@@ -1139,5 +1142,41 @@
 
    A number of tools exist that can run accessibility audits on web pages in your browser. Please use them in combination with other accessibility checks mentioned here as they can only test the technical accessibility of your HTML.
 
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+54. ### Principles of the Web Content Accessibility Guidelines
+
+   Can you explain the four principles of the Web Content Accessibility Guidelines (WCAG) and provide examples of how you’ve applied them in your previous projects?
+
+   The four principles of WCAG are Perceivable, Operable, Understandable, and Robust (POUR).
+
+   1. Perceivable: Ensuring content is presented in ways users can perceive. In a project, I used alt text for images, captions for videos, and proper headings to structure content.
+
+   2. Operable: Making interface components usable by everyone. I implemented keyboard navigation, provided skip links, and ensured sufficient time limits for user interactions.
+
+   3. Understandable: Creating clear, concise content that’s easy to comprehend. I adhered to readability guidelines, utilized consistent navigation, and provided helpful error messages on forms.
+
+   4. Robust: Ensuring compatibility with current and future technologies. I followed semantic HTML practices, tested with various assistive technologies, and validated code for compliance.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+55. ### How do you approach identifying and resolving accessibility issues for users with cognitive disabilities or memory-related impairments?
+
+   To address accessibility issues for users with cognitive disabilities or memory-related impairments, follow these steps:
+
+   1. Understand user needs: Research and empathize with the target audience to identify their specific challenges and requirements.
+
+   2. Simplify content: Use clear language, short sentences, and concise paragraphs to convey information effectively.
+
+   3. Consistent layout: Maintain a consistent structure throughout the website or application to minimize confusion.
+
+   4. Visual cues: Utilize visual aids like icons, images, and color coding to support comprehension and recall.
+
+   5. Provide instructions: Offer step-by-step guidance and context-sensitive help when needed.
+
+   6. Error prevention: Implement mechanisms to prevent errors, such as form validation and confirmation prompts.
+
+   7. Test and iterate: Conduct usability testing with real users, gather feedback, and refine the design accordingly.   
 
    **[⬆ Back to Top](#table-of-contents)**
